@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Project Lokvidya - A living archive of people's knowledge. Documenting indigenous wisdom in 15+ languages across India.">
+  <meta name="keywords" content="indigenous knowledge, folksongs, traditional practices, India, archive, lokvidya">
+
+  <title>Project Lokvidya | A Living Archive of People's Knowledge</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <div class="logo-box">
+          <div class="logo-stack">
+            <span class="logo-layer"></span>
+            <span class="logo-layer"></span>
+            <span class="logo-layer"></span>
+          </div>
+        </div>
+        <span class="logo-text">Lokvidya</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#map" class="nav-link">Data</a>
+        <a href="#archive" class="nav-link">Archive</a>
+        <a href="#stats" class="nav-link">Impact</a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero section">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-content">
+        <h1 class="hero-title reveal">
+          Project&nbsp;&nbsp;<span class="accent-text">Lokvidya</span>
+        </h1>
+
+        <p class="hero-subtitle reveal reveal-delay-1">
+          A living archive of people's knowledge
+        </p>
+
+        <div class="hero-feature-pills reveal reveal-delay-2">
+          <div class="hero-pill">
+            <span class="pill-icon">🌐</span>
+            <span>15 Indigenous Languages</span>
+          </div>
+          <div class="hero-pill">
+            <span class="pill-icon">📖</span>
+            <span>Pan-India Network</span>
+          </div>
+          <div class="hero-pill">
+            <span class="pill-icon">🤝</span>
+            <span>Community-Driven</span>
+          </div>
+        </div>
+
+        <div class="hero-stats-new reveal reveal-delay-3">
+          <div class="hero-stat-item">
+            <span class="stat-number" data-counter="entries">0</span>
+            <span class="stat-label">Cultural Entries</span>
+          </div>
+          <div class="hero-stat-item">
+            <span class="stat-number" data-counter="languages">0</span>
+            <span class="stat-label">Languages</span>
+          </div>
+          <div class="hero-stat-item">
+            <span class="stat-number" data-counter="contributors">0</span>
+            <span class="stat-label">Contributors</span>
+          </div>
+          <div class="hero-stat-item">
+            <span class="stat-number" data-counter="categories">0</span>
+            <span class="stat-label">Categories</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="map-section section">
+      <div class="map-container">
+        <div class="map-info reveal">
+          <span class="section-label">
+            <span>🗺️</span> Explore by Region
+          </span>
+          <h2 class="section-title">Discover Knowledge Across India</h2>
+          <p class="section-text">
+            Click on any highlighted state to explore the rich cultural documentation from that region. Our archive
+            spans Northeast India, Jharkhand, and beyond — preserving voices that might otherwise be lost.
+          </p>
+          <div class="map-legend">
+            <div class="legend-item">
+              <span class="legend-dot active"></span>
+              <span>States with documented languages</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot inactive"></span>
+              <span>Coming soon</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-visual reveal reveal-delay-1">
+          <svg class="india-map" viewBox="0 0 600 650" id="indiaMap">
+            <!-- Simplified India map paths -->
+            <!-- Jammu & Kashmir -->
+            <path data-state="jammu-kashmir" d="M150,30 L200,20 L230,40 L220,80 L180,100 L140,80 L130,50 Z" />
+
+            <!-- Himachal Pradesh -->
+            <path data-state="himachal" d="M180,100 L220,80 L240,100 L230,130 L200,140 L170,120 Z" />
+
+            <!-- Punjab -->
+            <path data-state="punjab" d="M140,100 L180,100 L170,120 L180,150 L140,160 L120,130 Z" />
+
+            <!-- Uttarakhand -->
+            <path data-state="uttarakhand" d="M230,130 L270,120 L290,150 L270,180 L230,170 L220,140 Z" />
+
+            <!-- Haryana -->
+            <path data-state="haryana" d="M170,150 L200,140 L220,170 L200,200 L160,190 L160,160 Z" />
+
+            <!-- Delhi -->
+            <path data-state="delhi" d="M185,190 L200,190 L205,205 L190,210 L180,200 Z" />
+
+            <!-- Rajasthan -->
+            <path data-state="rajasthan" d="M80,180 L160,160 L160,190 L180,220 L160,280 L100,300 L60,260 L50,200 Z" />
+
+            <!-- Uttar Pradesh -->
+            <path data-state="uttar-pradesh"
+              d="M200,200 L270,180 L320,200 L340,260 L300,300 L240,290 L200,260 L180,220 Z" />
+
+            <!-- Gujarat -->
+            <path data-state="gujarat" d="M30,260 L80,240 L100,300 L90,360 L40,380 L20,350 L10,300 Z" />
+
+            <!-- Madhya Pradesh -->
+            <path data-state="madhya-pradesh"
+              d="M100,300 L160,280 L200,300 L240,290 L280,320 L260,380 L180,400 L120,370 L90,340 Z" />
+
+            <!-- Bihar -->
+            <path data-state="bihar" d="M340,260 L380,250 L410,280 L400,310 L360,320 L330,290 Z" />
+
+            <!-- Jharkhand - Highlighted -->
+            <path data-state="jharkhand" d="M330,310 L400,310 L410,360 L370,390 L320,370 L310,330 Z" class="has-data" />
+
+            <!-- West Bengal -->
+            <path data-state="west-bengal" d="M400,310 L440,300 L450,380 L420,440 L380,420 L370,390 L410,360 Z" />
+
+            <!-- Odisha -->
+            <path data-state="odisha" d="M310,370 L370,390 L380,420 L360,470 L300,480 L280,430 L290,390 Z" />
+
+            <!-- Chhattisgarh -->
+            <path data-state="chhattisgarh" d="M260,380 L310,370 L310,430 L280,470 L240,450 L240,400 Z" />
+
+            <!-- Maharashtra -->
+            <path data-state="maharashtra" d="M90,380 L180,400 L240,400 L250,460 L200,520 L120,500 L80,450 Z" />
+
+            <!-- Telangana -->
+            <path data-state="telangana" d="M200,460 L250,460 L270,500 L240,540 L190,520 Z" />
+
+            <!-- Andhra Pradesh -->
+            <path data-state="andhra-pradesh" d="M240,480 L300,480 L320,530 L280,580 L220,570 L200,520 L240,540 Z" />
+
+            <!-- Karnataka -->
+            <path data-state="karnataka" d="M100,500 L190,520 L200,570 L180,620 L120,620 L90,560 Z" />
+
+            <!-- Goa -->
+            <path data-state="goa" d="M90,540 L100,530 L105,550 L95,560 Z" />
+
+            <!-- Kerala -->
+            <path data-state="kerala" d="M120,600 L140,580 L150,620 L130,670 L110,660 L115,620 Z" />
+
+            <!-- Tamil Nadu -->
+            <path data-state="tamil-nadu" d="M150,570 L220,570 L240,620 L200,670 L150,660 L140,620 Z" />
+
+            <!-- Northeast States - Highlighted -->
+            <!-- Assam -->
+            <path data-state="assam" d="M450,200 L520,190 L550,220 L540,260 L480,270 L450,240 Z" class="has-data" />
+
+            <!-- Arunachal Pradesh -->
+            <path data-state="arunachal-pradesh" d="M500,160 L570,140 L590,180 L560,210 L520,190 L490,170 Z"
+              class="has-data" />
+
+            <!-- Nagaland -->
+            <path data-state="nagaland" d="M550,220 L580,210 L590,250 L570,270 L540,260 Z" class="has-data" />
+
+            <!-- Manipur -->
+            <path data-state="manipur" d="M540,270 L570,270 L575,310 L550,320 L530,300 Z" class="has-data" />
+
+            <!-- Mizoram -->
+            <path data-state="mizoram" d="M530,320 L550,320 L555,370 L530,380 L515,350 Z" />
+
+            <!-- Tripura -->
+            <path data-state="tripura" d="M490,330 L520,320 L525,360 L500,370 L480,350 Z" />
+
+            <!-- Meghalaya -->
+            <path data-state="meghalaya" d="M460,270 L510,260 L520,290 L490,300 L460,290 Z" class="has-data" />
+
+            <!-- Sikkim -->
+            <path data-state="sikkim" d="M420,220 L440,210 L450,240 L435,250 L420,235 Z" />
+          </svg>
+
+          <div class="map-tooltip" id="mapTooltip">
+            <div class="map-tooltip-title"></div>
+            <div class="map-tooltip-languages"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Archive Section -->
+    <section id="archive" class="archive-section section">
+      <div class="archive-header reveal">
+        <span class="section-label">
+          <span>📚</span> Browse the Archive
+        </span>
+        <h2 class="section-title">Explore Indigenous Knowledge</h2>
+        <p class="section-text">
+          Filter by language or category to discover documented traditions from across India.
+        </p>
+      </div>
+
+      <div class="filter-controls reveal">
+        <div class="filter-section">
+          <span class="filter-label">Filter by Language</span>
+          <div class="filter-chips" id="languageFilters">
+            <button class="filter-chip" data-language="hindi">हिंदी Hindi</button>
+            <button class="filter-chip" data-language="mundari">Mundari</button>
+            <button class="filter-chip" data-language="ho">Ho</button>
+            <button class="filter-chip" data-language="santhali">Santhali</button>
+            <button class="filter-chip" data-language="assamese">অসমীয়া Assamese</button>
+            <button class="filter-chip" data-language="bodo">Bodo</button>
+            <button class="filter-chip" data-language="meitei">মৈতৈ Meitei</button>
+            <button class="filter-chip" data-language="khasi">Khasi</button>
+            <button class="filter-chip" data-language="nagamese">Nagamese</button>
+            <button class="filter-chip" data-language="wangcho">Wangcho</button>
+            <button class="filter-chip" data-language="kaman-mishmi">Kaman Mishmi</button>
+            <button class="filter-chip" data-language="deuri">Deuri</button>
+            <button class="filter-chip" data-language="sadri">Sadri</button>
+            <button class="filter-chip" data-language="khortha">Khortha</button>
+            <button class="filter-chip" data-language="english">English</button>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <span class="filter-label">Filter by Category</span>
+          <div class="filter-chips" id="categoryFilters">
+            <button class="filter-chip" data-category="folksongs">
+              <span class="chip-icon">🎵</span> Folksongs
+            </button>
+            <button class="filter-chip" data-category="agriculture">
+              <span class="chip-icon">🌾</span> Agriculture
+            </button>
+            <button class="filter-chip" data-category="forest">
+              <span class="chip-icon">🌲</span> Forest
+            </button>
+            <button class="filter-chip" data-category="food">
+              <span class="chip-icon">🍲</span> Food/Nutrition
+            </button>
+            <button class="filter-chip" data-category="culture">
+              <span class="chip-icon">🏛️</span> Culture/Traditions
+            </button>
+            <button class="filter-chip" data-category="other">
+              <span class="chip-icon">📁</span> Other
+            </button>
+          </div>
+        </div>
+
+        <button class="clear-filters" id="clearFilters">✕ Clear all filters</button>
+      </div>
+
+      <div class="results-info">
+        <span class="results-count">Loading entries...</span>
+      </div>
+
+      <div class="archive-grid" id="archiveGrid">
+        <!-- Cards will be dynamically inserted here -->
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="stats-section section">
+      <div class="stats-container">
+        <div class="stats-header reveal">
+          <span class="section-label">
+            <span>📊</span> Our Impact
+          </span>
+          <h2 class="section-title">Preserving Heritage in Numbers</h2>
+        </div>
+
+        <div class="stats-grid reveal">
+          <div class="stat-card">
+            <div class="stat-icon">📖</div>
+            <div class="stat-value" data-counter="entries">0</div>
+            <div class="stat-name">Total Entries</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🗣️</div>
+            <div class="stat-value" data-counter="languages">0</div>
+            <div class="stat-name">Languages Documented</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🏘️</div>
+            <div class="stat-value" data-counter="categories">0</div>
+            <div class="stat-name">States Covered</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div class="stat-value" data-counter="contributors">0</div>
+            <div class="stat-name">Contributors</div>
+          </div>
+        </div>
+
+        <div class="charts-row reveal">
+          <div class="chart-card">
+            <h3 class="chart-title">Entries by Category</h3>
+            <div class="bar-chart" id="categoryChart">
+              <div class="chart-bar">
+                <span class="bar-label">Folksongs</span>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width: 0%; background: #EC4899;" data-width="17"></div>
+                </div>
+                <span class="bar-value">5</span>
+              </div>
+              <div class="chart-bar">
+                <span class="bar-label">Culture</span>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width: 0%; background: #8B5CF6;" data-width="17"></div>
+                </div>
+                <span class="bar-value">5</span>
+              </div>
+              <div class="chart-bar">
+                <span class="bar-label">Agriculture</span>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width: 0%; background: #22C55E;" data-width="13"></div>
+                </div>
+                <span class="bar-value">4</span>
+              </div>
+              <div class="chart-bar">
+                <span class="bar-label">Forest</span>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width: 0%; background: #10B981;" data-width="13"></div>
+                </div>
+                <span class="bar-value">4</span>
+              </div>
+              <div class="chart-bar">
+                <span class="bar-label">Food</span>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width: 0%; background: #F97316;" data-width="17"></div>
+                </div>
+                <span class="bar-value">5</span>
+              </div>
+              <div class="chart-bar">
+                <span class="bar-label">Other</span>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width: 0%; background: #64748B;" data-width="23"></div>
+                </div>
+                <span class="bar-value">7</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <h3 class="chart-title">Entries by Type</h3>
+            <div class="bar-chart" id="typeChart">
+              <div class="chart-bar">
+                <span class="bar-label">📷 Images</span>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width: 0%; background: #8B5CF6;" data-width="60"></div>
+                </div>
+                <span class="bar-value">18</span>
+              </div>
+              <div class="chart-bar">
+                <span class="bar-label">🎧 Audio</span>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width: 0%; background: #EC4899;" data-width="33"></div>
+                </div>
+                <span class="bar-value">10</span>
+              </div>
+              <div class="chart-bar">
+                <span class="bar-label">📄 Text</span>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width: 0%; background: #64748B;" data-width="7"></div>
+                </div>
+                <span class="bar-value">2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <span class="footer-logo-icon">🪷</span>
+            <span class="footer-logo-text">Lokvidya</span>
+          </a>
+          <p class="footer-description">
+            A living archive of people's knowledge. Preserving indigenous wisdom from communities across India for
+            future generations.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+            <a href="#" class="social-link" aria-label="GitHub">⌨</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#archive">Browse Archive</a></li>
+            <li><a href="#map">Regional Map</a></li>
+            <li><a href="#stats">Statistics</a></li>
+            <li><a href="#">Search</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#archive?category=folksongs">Folksongs</a></li>
+            <li><a href="#archive?category=agriculture">Agriculture</a></li>
+            <li><a href="#archive?category=culture">Culture</a></li>
+            <li><a href="#archive?category=food">Food</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>About</h4>
+          <ul class="footer-links">
+            <li><a href="#">Mission</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Project Lokvidya. Open source under CC BY-SA 4.0</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
