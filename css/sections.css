@@ -321,23 +321,25 @@
     }
 
     .hero-title {
-        font-size: clamp(2.2rem, 8vw, 3.5rem);
+        display: block;
+        text-align: center;
+        font-size: clamp(1.9rem, 7vw, 2.8rem);
     }
 
     .hero-title .accent-text {
-        padding: 0 16px;
+        padding: 0 10px;
     }
 
     .hero-title .accent-text::before {
-        width: 5px;
-        top: -14px;
-        height: 65%;
+        width: 4px;
+        top: -8px;
+        height: 55%;
     }
 
     .hero-title .accent-text::after {
-        width: 5px;
-        bottom: -14px;
-        height: 65%;
+        width: 4px;
+        bottom: -8px;
+        height: 55%;
     }
 
     .hero-subtitle {
