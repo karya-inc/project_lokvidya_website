@@ -24,8 +24,7 @@
   <link rel="stylesheet" href="css/sections.css">
 
   <!-- Favicon -->
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>">
+  <link rel="icon" href="assets/karya_icon.png">
 </head>
 
 <body>
@@ -33,13 +32,7 @@
   <header class="header" id="header">
     <div class="header-inner">
       <a href="#" class="logo">
-        <div class="logo-box">
-          <div class="logo-stack">
-            <span class="logo-layer"></span>
-            <span class="logo-layer"></span>
-            <span class="logo-layer"></span>
-          </div>
-        </div>
+        <img src="assets/karya_logo.png" alt="Karya Logo" class="karya-logo">
         <span class="logo-text">Lokvidya</span>
       </a>
 
@@ -72,15 +65,16 @@
 
         <div class="hero-feature-pills reveal reveal-delay-2">
           <div class="hero-pill">
-            <span class="pill-icon">🌐</span>
+            <span class="pill-icon"><img src="assets/noun-language-5148455.png" width="26" height="26"
+                alt="Languages"></span>
             <span>15 Indigenous Languages</span>
           </div>
           <div class="hero-pill">
-            <span class="pill-icon">📖</span>
+            <span class="pill-icon"><img src="assets/india.png" width="24" height="24" alt="India"></span>
             <span>Pan-India Network</span>
           </div>
           <div class="hero-pill">
-            <span class="pill-icon">🤝</span>
+            <span class="pill-icon"><img src="assets/group.png" width="24" height="24" alt="Community"></span>
             <span>Community-Driven</span>
           </div>
         </div>
@@ -111,12 +105,13 @@
       <div class="map-container">
         <div class="map-info reveal">
           <span class="section-label">
-            <span>🗺️</span> Explore by Region
+            <span><img src="assets/map.png" width="24" height="24" alt="Map"
+                style="vertical-align: middle; margin-right: 4px;"></span> Explore by Region
           </span>
           <h2 class="section-title">Discover Knowledge Across India</h2>
           <p class="section-text">
             Click on any highlighted state to explore the rich cultural documentation from that region. Our archive
-            spans Northeast India, Jharkhand, and beyond — preserving voices that might otherwise be lost.
+            spans Northeast India, Jharkhand, and beyond - preserving voices that might otherwise be lost.
           </p>
           <div class="map-legend">
             <div class="legend-item">
@@ -215,7 +210,8 @@
     <section id="archive" class="archive-section section">
       <div class="archive-header reveal">
         <span class="section-label">
-          <span>📚</span> Browse the Archive
+          <span><img src="assets/folder.png" width="24" height="24" alt="Archive"
+              style="vertical-align: middle; margin-right: 4px;"></span> Browse the Archive
         </span>
         <h2 class="section-title">Explore Indigenous Knowledge</h2>
         <p class="section-text">
@@ -227,13 +223,13 @@
         <div class="filter-section">
           <span class="filter-label">Filter by Language</span>
           <div class="filter-chips" id="languageFilters">
-            <button class="filter-chip" data-language="hindi">हिंदी Hindi</button>
+            <button class="filter-chip" data-language="hindi">Hindi</button>
             <button class="filter-chip" data-language="mundari">Mundari</button>
             <button class="filter-chip" data-language="ho">Ho</button>
             <button class="filter-chip" data-language="santhali">Santhali</button>
-            <button class="filter-chip" data-language="assamese">অসমীয়া Assamese</button>
+            <button class="filter-chip" data-language="assamese">Assamese</button>
             <button class="filter-chip" data-language="bodo">Bodo</button>
-            <button class="filter-chip" data-language="meitei">মৈতৈ Meitei</button>
+            <button class="filter-chip" data-language="meitei">Meitei</button>
             <button class="filter-chip" data-language="khasi">Khasi</button>
             <button class="filter-chip" data-language="nagamese">Nagamese</button>
             <button class="filter-chip" data-language="wangcho">Wangcho</button>
@@ -248,23 +244,35 @@
         <div class="filter-section">
           <span class="filter-label">Filter by Category</span>
           <div class="filter-chips" id="categoryFilters">
-            <button class="filter-chip" data-category="folksongs">
-              <span class="chip-icon">🎵</span> Folksongs
+            <button class="filter-chip" data-category="folksongs"
+              style="background: #1661764D; color: black; border: 1px solid #16617680;">
+              <span class="chip-icon"><img src="assets/music-note.png" width="18" height="18" alt="Folksongs"></span>
+              Folksongs
             </button>
-            <button class="filter-chip" data-category="agriculture">
-              <span class="chip-icon">🌾</span> Agriculture
+            <button class="filter-chip" data-category="agriculture"
+              style="background: #00AFDF4D; color: black; border: 1px solid #00AFDF80;">
+              <span class="chip-icon"><img src="assets/sprout.png" width="18" height="18" alt="Agriculture"></span>
+              Agriculture
             </button>
-            <button class="filter-chip" data-category="forest">
-              <span class="chip-icon">🌲</span> Forest
+            <button class="filter-chip" data-category="forest"
+              style="background: #14B1664D; color: black; border: 1px solid #14B16680;">
+              <span class="chip-icon"><img src="assets/trees.png" width="18" height="18" alt="Forest"></span>
+              Forest
             </button>
-            <button class="filter-chip" data-category="food">
-              <span class="chip-icon">🍲</span> Food/Nutrition
+            <button class="filter-chip" data-category="food"
+              style="background: #D8FA704D; color: black; border: 1px solid #D8FA7080;">
+              <span class="chip-icon"><img src="assets/noun-food-7999827.png" width="18" height="18" alt="Food"></span>
+              Food/Nutrition
             </button>
-            <button class="filter-chip" data-category="culture">
-              <span class="chip-icon">🏛️</span> Culture/Traditions
+            <button class="filter-chip" data-category="culture"
+              style="background: #8FE7FF4D; color: black; border: 1px solid #8FE7FF80;">
+              <span class="chip-icon"><img src="assets/parthenon.png" width="18" height="18" alt="Culture"></span>
+              Culture/Traditions
             </button>
-            <button class="filter-chip" data-category="other">
-              <span class="chip-icon">📁</span> Other
+            <button class="filter-chip" data-category="other"
+              style="background: #94A3B84D; color: black; border: 1px solid #94A3B880;">
+              <span class="chip-icon"><img src="assets/application.png" width="18" height="18" alt="Other"></span>
+              Other
             </button>
           </div>
         </div>
@@ -286,29 +294,31 @@
       <div class="stats-container">
         <div class="stats-header reveal">
           <span class="section-label">
-            <span>📊</span> Our Impact
+            <span><img src="assets/noun-impact-7432111.png" width="30" height="30" alt="Impact"
+                style="vertical-align: middle; margin-right: 4px;"></span> Our Impact
           </span>
           <h2 class="section-title">Preserving Heritage in Numbers</h2>
         </div>
 
         <div class="stats-grid reveal">
           <div class="stat-card">
-            <div class="stat-icon">📖</div>
+            <div class="stat-icon"><img src="assets/book.png" width="32" height="32" alt="Entries"></div>
             <div class="stat-value" data-counter="entries">0</div>
             <div class="stat-name">Total Entries</div>
           </div>
           <div class="stat-card">
-            <div class="stat-icon">🗣️</div>
+            <div class="stat-icon"><img src="assets/noun-language-5148455.png" width="40" height="40" alt="Languages">
+            </div>
             <div class="stat-value" data-counter="languages">0</div>
             <div class="stat-name">Languages Documented</div>
           </div>
           <div class="stat-card">
-            <div class="stat-icon">🏘️</div>
+            <div class="stat-icon"><img src="assets/map.png" width="32" height="32" alt="States"></div>
             <div class="stat-value" data-counter="categories">0</div>
             <div class="stat-name">States Covered</div>
           </div>
           <div class="stat-card">
-            <div class="stat-icon">👥</div>
+            <div class="stat-icon"><img src="assets/group.png" width="32" height="32" alt="Contributors"></div>
             <div class="stat-value" data-counter="contributors">0</div>
             <div class="stat-name">Contributors</div>
           </div>
@@ -321,42 +331,42 @@
               <div class="chart-bar">
                 <span class="bar-label">Folksongs</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: var(--color-lime);" data-width="17"></div>
+                  <div class="bar-fill" style="width: 0%; background: #166176BF;" data-width="17"></div>
                 </div>
                 <span class="bar-value">5</span>
               </div>
               <div class="chart-bar">
                 <span class="bar-label">Culture</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: var(--color-impact-green);" data-width="17"></div>
+                  <div class="bar-fill" style="width: 0%; background: #8FE7FFBF;" data-width="17"></div>
                 </div>
                 <span class="bar-value">5</span>
               </div>
               <div class="chart-bar">
                 <span class="bar-label">Agriculture</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: var(--color-sea);" data-width="13"></div>
+                  <div class="bar-fill" style="width: 0%; background: #00AFDFBF;" data-width="13"></div>
                 </div>
                 <span class="bar-value">4</span>
               </div>
               <div class="chart-bar">
                 <span class="bar-label">Forest</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: var(--color-deep-sea);" data-width="13"></div>
+                  <div class="bar-fill" style="width: 0%; background: #14B166BF;" data-width="13"></div>
                 </div>
                 <span class="bar-value">4</span>
               </div>
               <div class="chart-bar">
                 <span class="bar-label">Food</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: var(--color-tech-blue);" data-width="17"></div>
+                  <div class="bar-fill" style="width: 0%; background: #D8FA70BF;" data-width="17"></div>
                 </div>
                 <span class="bar-value">5</span>
               </div>
               <div class="chart-bar">
                 <span class="bar-label">Other</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: var(--color-light-grey);" data-width="23"></div>
+                  <div class="bar-fill" style="width: 0%; background: #94A3B8BF;" data-width="23"></div>
                 </div>
                 <span class="bar-value">7</span>
               </div>
@@ -367,16 +377,18 @@
             <h3 class="chart-title">Entries by Type</h3>
             <div class="bar-chart" id="typeChart">
               <div class="chart-bar">
-                <span class="bar-label">📷 Images</span>
+                <span class="bar-label"><img src="assets/image (4).png" width="18" height="18" alt="Images"
+                    style="vertical-align: middle; margin-right: 4px;">Images</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: var(--color-tech-blue);" data-width="60"></div>
+                  <div class="bar-fill" style="width: 0%; background: #00AFDFBF;" data-width="60"></div>
                 </div>
                 <span class="bar-value">18</span>
               </div>
               <div class="chart-bar">
-                <span class="bar-label">🎧 Audio</span>
+                <span class="bar-label"><img src="assets/headphones.png" width="18" height="18" alt="Audio"
+                    style="vertical-align: middle; margin-right: 4px;">Audio</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: var(--color-deep-sea);" data-width="33"></div>
+                  <div class="bar-fill" style="width: 0%; background: #166176BF;" data-width="33"></div>
                 </div>
                 <span class="bar-value">10</span>
               </div>
@@ -392,7 +404,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#" class="footer-logo">
-            <span class="footer-logo-icon">🪷</span>
+            <img src="assets/karya_icon.png" alt="Karya Logo" class="karya-logo">
             <span class="footer-logo-text">Lokvidya</span>
           </a>
           <p class="footer-description">
@@ -404,10 +416,10 @@
         <div class="footer-column">
           <h4>Explore</h4>
           <ul class="footer-links">
+            <li><a href="#">About</a></li>
             <li><a href="#archive">Browse Archive</a></li>
             <li><a href="#map">Regional Map</a></li>
             <li><a href="#stats">Statistics</a></li>
-            <li><a href="#">Search</a></li>
           </ul>
         </div>
 
@@ -419,15 +431,6 @@
             <li><a href="#archive?category=culture">Culture</a></li>
             <li><a href="#archive?category=food">Food</a></li>
           </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2025 Project Lokvidya. Open source under CC BY-SA 4.0</p>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Accessibility</a>
         </div>
       </div>
     </div>

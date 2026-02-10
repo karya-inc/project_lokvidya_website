@@ -6,7 +6,7 @@
 
 class ArchiveFilter {
   constructor() {
-    this.activeLanguage = null;
+    this.activeLanguages = [];
     this.activeCategory = null;
   }
 
@@ -21,7 +21,8 @@ class ArchiveFilter {
     document.querySelectorAll('.filter-chip[data-language]').forEach(chip => {
       chip.addEventListener('click', () => {
         const language = chip.dataset.language;
-        this.filterByLanguage(language === this.activeLanguage ? null : language);
+        const isSelected = this.activeLanguages.includes(language) && this.activeLanguages.length === 1;
+        this.filterByLanguage(isSelected ? null : language);
       });
     });
   }
@@ -43,7 +44,14 @@ class ArchiveFilter {
   }
 
   filterByLanguage(language) {
-    this.activeLanguage = language;
+    this.activeLanguages = language ? [language] : [];
+    this.updateFilterChips();
+    this.renderFilteredResults();
+    this.updateResultsInfo();
+  }
+
+  filterByLanguages(languages) {
+    this.activeLanguages = languages || [];
     this.updateFilterChips();
     this.renderFilteredResults();
     this.updateResultsInfo();
@@ -57,7 +65,7 @@ class ArchiveFilter {
   }
 
   resetFilters() {
-    this.activeLanguage = null;
+    this.activeLanguages = [];
     this.activeCategory = null;
     this.updateFilterChips();
     this.renderFilteredResults();
@@ -66,20 +74,20 @@ class ArchiveFilter {
 
   updateFilterChips() {
     document.querySelectorAll('.filter-chip[data-language]').forEach(chip => {
-      chip.classList.toggle('active', chip.dataset.language === this.activeLanguage);
+      chip.classList.toggle('active', this.activeLanguages.includes(chip.dataset.language));
     });
     document.querySelectorAll('.filter-chip[data-category]').forEach(chip => {
       chip.classList.toggle('active', chip.dataset.category === this.activeCategory);
     });
     const clearBtn = document.querySelector('.clear-filters');
     if (clearBtn) {
-      clearBtn.style.display = (this.activeLanguage || this.activeCategory) ? 'inline-block' : 'none';
+      clearBtn.style.display = (this.activeLanguages.length > 0 || this.activeCategory) ? 'inline-block' : 'none';
     }
   }
 
   getFilteredResults() {
     let results = [...archiveData];
-    if (this.activeLanguage) results = results.filter(item => item.language === this.activeLanguage);
+    if (this.activeLanguages.length > 0) results = results.filter(item => this.activeLanguages.includes(item.language));
     if (this.activeCategory) results = results.filter(item => item.category === this.activeCategory);
     return results;
   }
@@ -158,11 +166,11 @@ class ArchiveFilter {
     return `
       <article class="card archive-card unified-card-v2" data-id="${item.id}">
         <div class="card-header-v2">
-          <span class="badge badge-cat-v2" style="background: ${category.color}15; color: ${category.color};">
+          <span class="badge badge-cat-v2" style="background: ${category.color}4D; color: black;">
             ${category.icon} ${category.name}
           </span>
           <span class="badge-lang-v2">
-            <span class="lang-icon">🌐</span> ${language.name}
+            <span class="lang-icon"><img src="assets/global.png" width="18" height="18" alt="Language" style="vertical-align: middle; margin-right: 2px;"></span> ${language.name}
           </span>
         </div>
         <div class="card-body-v2">
@@ -284,7 +292,7 @@ class ArchiveFilter {
     if (!resultsInfo) return;
     const results = this.getFilteredResults();
     const total = archiveData.length;
-    resultsInfo.innerHTML = this.activeLanguage || this.activeCategory
+    resultsInfo.innerHTML = this.activeLanguages.length > 0 || this.activeCategory
       ? `Showing <strong>${results.length}</strong> of ${total} entries`
       : `Showing all <strong>${total}</strong> entries`;
   }
@@ -307,7 +315,7 @@ class ArchiveFilter {
 
   loadFromURL() {
     const params = new URLSearchParams(window.location.search);
-    if (params.get('language')) this.activeLanguage = params.get('language');
+    if (params.get('language')) this.activeLanguages = [params.get('language')];
     if (params.get('category')) this.activeCategory = params.get('category');
     this.updateFilterChips();
     this.renderFilteredResults();

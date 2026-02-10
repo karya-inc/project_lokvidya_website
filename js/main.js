@@ -187,14 +187,12 @@ function initMap() {
 
     // Connect map clicks to archive filter
     indiaMap.onStateClick = (stateName, languages) => {
-        // If only one language, filter directly
-        if (languages.length === 1) {
-            archiveFilter.filterByLanguage(languages[0]);
-        } else {
-            // Show language selection or filter by first language
-            // For now, filter by the first language
-            archiveFilter.filterByLanguage(languages[0]);
+        if (!stateName) {
+            archiveFilter.resetFilters();
+            return;
         }
+        // Filter by all languages in the state
+        archiveFilter.filterByLanguages(languages);
     };
 }
 

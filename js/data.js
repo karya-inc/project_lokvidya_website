@@ -19,17 +19,46 @@ const LANGUAGES = [
   { id: 'sadri', name: 'Sadri', nativeName: 'सादरी', region: 'East India', state: 'Jharkhand' },
   { id: 'khortha', name: 'Khortha', nativeName: 'खोरठा', region: 'East India', state: 'Jharkhand' },
   { id: 'deuri', name: 'Deuri', nativeName: 'Deuri', region: 'Northeast', state: 'Assam' },
-  { id: 'kaman-mishmi', name: 'Kaman Mishmi', nativeName: 'Kaman', region: 'Northeast', state: 'Arunachal Pradesh' },
-  { id: 'bhojpuri', name: 'Bhojpuri', nativeName: 'भोजपुरी', region: 'North India', state: 'Bihar' }
+  { id: 'kaman-mishmi', name: 'Kaman Mishmi', nativeName: 'Kaman', region: 'Northeast', state: 'Arunachal Pradesh' }
 ];
 
 const CATEGORIES = [
-  { id: 'folksongs', name: 'Folksongs', icon: '🎵', color: '#EC4899' },
-  { id: 'agriculture', name: 'Agriculture', icon: '🌾', color: '#22C55E' },
-  { id: 'forest', name: 'Forest', icon: '🌲', color: '#10B981' },
-  { id: 'food', name: 'Food/Nutrition', icon: '🍲', color: '#F97316' },
-  { id: 'culture', name: 'Culture/Traditions', icon: '🏛️', color: '#8B5CF6' },
-  { id: 'other', name: 'Other', icon: '📁', color: '#64748B' }
+  {
+    id: 'folksongs',
+    name: 'Folksongs',
+    icon: `<img src="assets/music-note.png" width="18" height="18" alt="Folksongs" style="display: inline-block; vertical-align: middle; margin-right: 6px;">`,
+    color: '#166176'
+  },
+  {
+    id: 'agriculture',
+    name: 'Agriculture',
+    icon: `<img src="assets/sprout.png" width="18" height="18" alt="Agriculture" style="display: inline-block; vertical-align: middle; margin-right: 6px;">`,
+    color: '#00AFDF'
+  },
+  {
+    id: 'forest',
+    name: 'Forest',
+    icon: `<img src="assets/trees.png" width="18" height="18" alt="Forest" style="display: inline-block; vertical-align: middle; margin-right: 6px;">`,
+    color: '#14B166'
+  },
+  {
+    id: 'food',
+    name: 'Food/Nutrition',
+    icon: `<img src="assets/noun-food-7999827.png" width="18" height="18" alt="Food" style="display: inline-block; vertical-align: middle; margin-right: 6px;">`,
+    color: '#D8FA70'
+  },
+  {
+    id: 'culture',
+    name: 'Culture/Traditions',
+    icon: `<img src="assets/parthenon.png" width="18" height="18" alt="Culture" style="display: inline-block; vertical-align: middle; margin-right: 6px;">`,
+    color: '#8FE7FF'
+  },
+  {
+    id: 'other',
+    name: 'Other',
+    icon: `<img src="assets/application.png" width="18" height="18" alt="Other" style="display: inline-block; vertical-align: middle; margin-right: 6px;">`,
+    color: '#94A3B8'
+  }
 ];
 
 const FOLKSONG_QUESTIONS = [
@@ -386,29 +415,6 @@ const archiveData = [
         en: 'Deuri pottery is made without a potter\'s wheel using the coil method. Different shapes are for rituals.'
       }
     },
-  },
-  {
-    id: 15,
-    title: 'Madhubani Painting Traditions',
-    language: 'bhojpuri',
-    category: 'culture',
-    type: 'images',
-    contributor: 'रश्मि देवी',
-    date: '2025-11-10',
-    images: [
-      { id: 1, description: 'Traditional wall art', placeholder: '🎨' },
-      { id: 2, description: 'Natural color preparation', placeholder: '🌿' }
-    ],
-    questions: {
-      about_art: {
-        native: 'मधुबनी पेंटिंग हमनी के पुरान कला ह। इमें प्राकृतिक रंग के प्रयोग होला।',
-        en: 'Madhubani painting is our ancient art form. It uses natural colors derived from plants and minerals.'
-      },
-      process: {
-        native: 'पहिले इ सिर्फ दीवार पर बनत रहे, अब कागज अउर कपड़ा पर भी बनेला।',
-        en: 'Initially it was only done on walls, but now it is also practiced on paper and cloth.'
-      }
-    }
   }
 ];
 
@@ -438,5 +444,5 @@ const stateLanguages = {
   'arunachal-pradesh': ['wangcho', 'kaman-mishmi'],
   'meghalaya': ['khasi'],
   'manipur': ['meitei'],
-  'bihar': ['bhojpuri']
+  'bihar': ['sadri']
 };

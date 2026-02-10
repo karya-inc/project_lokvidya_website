@@ -5,208 +5,212 @@
    ============================================ */
 
 :root {
-  /* ═══════════════════════════════════════════
+   /* ═══════════════════════════════════════════
      COLOR PALETTE - Karya.in Inspired
      Dark navy, light blue-gray, green accents
      ═══════════════════════════════════════════ */
 
-  /* ═══════════════════════════════════════════
+   /* ═══════════════════════════════════════════
      COLOR PALETTE - Updated
      ═══════════════════════════════════════════ */
 
-  /* ═══════════════════════════════════════════
+   /* ═══════════════════════════════════════════
      STRICT BRAND PALETTE
      ═══════════════════════════════════════════ */
-  --color-lime: #D8FA70;
-  --color-impact-green: #14B166;
-  --color-sea: #8FE7FF;
-  --color-deep-sea: #166176;
-  --color-tech-blue: #00AFDF;
-  --color-dark-blue: #0A313C;
-  --color-light-grey: #D5D5D5;
-  --color-warm-gray: #F6F1EC;
+   --color-lime: #D8FA70;
+   --color-impact-green: #14B166;
+   --color-sea: #8FE7FF;
+   --color-deep-sea: #166176;
+   --color-tech-blue: #00AFDF;
+   --color-dark-blue: #0A313C;
+   --color-light-grey: #D5D5D5;
+   --color-warm-gray: #F6F1EC;
 
-  /* Semantic Colors - Mapped to Palette */
-  --text-primary: var(--color-dark-blue);
-  --text-secondary: var(--color-deep-sea);
-  --text-inverse: var(--color-warm-gray);
-  --bg-primary: var(--color-warm-gray);
-  --bg-secondary: white;
-  /* keeping white for extreme contrast if needed, but will prioritize warm-gray */
-  --bg-dark: var(--color-dark-blue);
-  --accent-primary: var(--color-impact-green);
-  --accent-secondary: var(--color-tech-blue);
+   /* Semantic Colors - Mapped to Palette */
+   --text-primary: var(--color-dark-blue);
+   --text-secondary: var(--color-deep-sea);
+   --text-inverse: var(--color-warm-gray);
+   --bg-primary: var(--color-warm-gray);
+   --bg-secondary: white;
+   /* keeping white for extreme contrast if needed, but will prioritize warm-gray */
+   --bg-dark: var(--color-dark-blue);
+   --accent-primary: var(--color-impact-green);
+   --accent-secondary: var(--color-tech-blue);
+   --teal-accent: var(--color-impact-green);
+   --green-primary: var(--color-impact-green);
+   --navy-dark: var(--color-dark-blue);
+   --deep-teal: var(--color-deep-sea);
 
-  /* Category Colors - Mapped to Palette */
-  --cat-folksongs: var(--color-impact-green);
-  --cat-agriculture: var(--color-tech-blue);
-  --cat-forest: var(--color-deep-sea);
-  --cat-food: var(--color-lime);
-  --cat-culture: var(--color-sea);
-  --cat-other: var(--color-dark-blue);
+   /* Category Colors - Mapped to Palette */
+   --cat-folksongs: var(--color-deep-sea);
+   --cat-agriculture: var(--color-tech-blue);
+   --cat-forest: var(--color-impact-green);
+   --cat-food: var(--color-lime);
+   --cat-culture: var(--color-sea);
+   --cat-other: #94A3B8;
 
-  /* ═══════════════════════════════════════════
+   /* ═══════════════════════════════════════════
      TYPOGRAPHY
      ═══════════════════════════════════════════ */
 
-  /* Font Families */
-  --font-display: 'Noto Serif', serif;
-  --font-body: 'DM Sans', sans-serif;
-  --font-accent: 'DM Sans', sans-serif;
+   /* Font Families */
+   --font-display: 'Noto Serif', serif;
+   --font-body: 'DM Sans', sans-serif;
+   --font-accent: 'DM Sans', sans-serif;
 
-  /* Font Sizes - 8pt Grid with Perfect Fourth Scale (1.333) */
-  --text-xs: 0.75rem;
-  /* 12px */
-  --text-sm: 0.875rem;
-  /* 14px */
-  --text-base: 1rem;
-  /* 16px */
-  --text-lg: 1.125rem;
-  /* 18px */
-  --text-xl: 1.333rem;
-  /* ~21px */
-  --text-2xl: 1.777rem;
-  /* ~28px */
-  --text-3xl: 2.369rem;
-  /* ~38px */
-  --text-4xl: 3.157rem;
-  /* ~50px */
-  --text-5xl: 4.209rem;
-  /* ~67px */
-  --text-6xl: 5.61rem;
-  /* ~90px */
+   /* Font Sizes - 8pt Grid with Perfect Fourth Scale (1.333) */
+   --text-xs: 0.75rem;
+   /* 12px */
+   --text-sm: 0.875rem;
+   /* 14px */
+   --text-base: 1rem;
+   /* 16px */
+   --text-lg: 1.125rem;
+   /* 18px */
+   --text-xl: 1.333rem;
+   /* ~21px */
+   --text-2xl: 1.777rem;
+   /* ~28px */
+   --text-3xl: 2.369rem;
+   /* ~38px */
+   --text-4xl: 3.157rem;
+   /* ~50px */
+   --text-5xl: 4.209rem;
+   /* ~67px */
+   --text-6xl: 5.61rem;
+   /* ~90px */
 
-  /* Font Weights */
-  --font-light: 300;
-  --font-regular: 400;
-  --font-medium: 500;
-  --font-semibold: 600;
-  --font-bold: 700;
+   /* Font Weights */
+   --font-light: 300;
+   --font-regular: 400;
+   --font-medium: 500;
+   --font-semibold: 600;
+   --font-bold: 700;
 
-  /* Line Heights */
-  --leading-tight: 1.2;
-  --leading-snug: 1.375;
-  --leading-normal: 1.5;
-  --leading-relaxed: 1.625;
-  --leading-loose: 2;
+   /* Line Heights */
+   --leading-tight: 1.2;
+   --leading-snug: 1.375;
+   --leading-normal: 1.5;
+   --leading-relaxed: 1.625;
+   --leading-loose: 2;
 
-  /* Letter Spacing */
-  --tracking-tight: -0.025em;
-  --tracking-normal: 0;
-  --tracking-wide: 0.025em;
-  --tracking-wider: 0.05em;
-  --tracking-widest: 0.1em;
+   /* Letter Spacing */
+   --tracking-tight: -0.025em;
+   --tracking-normal: 0;
+   --tracking-wide: 0.025em;
+   --tracking-wider: 0.05em;
+   --tracking-widest: 0.1em;
 
-  /* ═══════════════════════════════════════════
+   /* ═══════════════════════════════════════════
      SPACING - 8pt Grid System
      ═══════════════════════════════════════════ */
 
-  --space-1: 0.25rem;
-  /* 4px */
-  --space-2: 0.5rem;
-  /* 8px */
-  --space-3: 0.75rem;
-  /* 12px */
-  --space-4: 1rem;
-  /* 16px */
-  --space-5: 1.25rem;
-  /* 20px */
-  --space-6: 1.5rem;
-  /* 24px */
-  --space-8: 2rem;
-  /* 32px */
-  --space-10: 2.5rem;
-  /* 40px */
-  --space-12: 3rem;
-  /* 48px */
-  --space-16: 4rem;
-  /* 64px */
-  --space-20: 5rem;
-  /* 80px */
-  --space-24: 6rem;
-  /* 96px */
-  --space-32: 8rem;
-  /* 128px */
+   --space-1: 0.25rem;
+   /* 4px */
+   --space-2: 0.5rem;
+   /* 8px */
+   --space-3: 0.75rem;
+   /* 12px */
+   --space-4: 1rem;
+   /* 16px */
+   --space-5: 1.25rem;
+   /* 20px */
+   --space-6: 1.5rem;
+   /* 24px */
+   --space-8: 2rem;
+   /* 32px */
+   --space-10: 2.5rem;
+   /* 40px */
+   --space-12: 3rem;
+   /* 48px */
+   --space-16: 4rem;
+   /* 64px */
+   --space-20: 5rem;
+   /* 80px */
+   --space-24: 6rem;
+   /* 96px */
+   --space-32: 8rem;
+   /* 128px */
 
-  /* ═══════════════════════════════════════════
+   /* ═══════════════════════════════════════════
      BORDERS & SHAPES
      ═══════════════════════════════════════════ */
 
-  --radius-sm: 0.25rem;
-  /* 4px */
-  --radius-md: 0.5rem;
-  /* 8px */
-  --radius-lg: 0.75rem;
-  /* 12px */
-  --radius-xl: 1rem;
-  /* 16px */
-  --radius-2xl: 1.5rem;
-  /* 24px */
-  --radius-full: 9999px;
+   --radius-sm: 0.25rem;
+   /* 4px */
+   --radius-md: 0.5rem;
+   /* 8px */
+   --radius-lg: 0.75rem;
+   /* 12px */
+   --radius-xl: 1rem;
+   /* 16px */
+   --radius-2xl: 1.5rem;
+   /* 24px */
+   --radius-full: 9999px;
 
-  --border-thin: 1px;
-  --border-medium: 2px;
-  --border-thick: 4px;
+   --border-thin: 1px;
+   --border-medium: 2px;
+   --border-thick: 4px;
 
-  /* ═══════════════════════════════════════════
+   /* ═══════════════════════════════════════════
      SHADOWS & ELEVATION
      ═══════════════════════════════════════════ */
 
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+   --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
 
-  /* Colored shadows */
-  --shadow-green: 0 10px 40px -10px rgba(34, 197, 94, 0.4);
-  --shadow-navy: 0 10px 40px -10px rgba(27, 40, 56, 0.3);
+   /* Colored shadows */
+   --shadow-green: 0 10px 40px -10px rgba(34, 197, 94, 0.4);
+   --shadow-navy: 0 10px 40px -10px rgba(27, 40, 56, 0.3);
 
-  /* ═══════════════════════════════════════════
+   /* ═══════════════════════════════════════════
      TRANSITIONS & ANIMATIONS
      ═══════════════════════════════════════════ */
 
-  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-out: cubic-bezier(0, 0, 0.2, 1);
-  --ease-in: cubic-bezier(0.4, 0, 1, 1);
-  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+   --ease-out: cubic-bezier(0, 0, 0.2, 1);
+   --ease-in: cubic-bezier(0.4, 0, 1, 1);
+   --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-  --duration-fast: 150ms;
-  --duration-normal: 300ms;
-  --duration-slow: 500ms;
-  --duration-slower: 700ms;
+   --duration-fast: 150ms;
+   --duration-normal: 300ms;
+   --duration-slow: 500ms;
+   --duration-slower: 700ms;
 
-  --transition-colors: color var(--duration-normal) var(--ease-in-out),
-    background-color var(--duration-normal) var(--ease-in-out),
-    border-color var(--duration-normal) var(--ease-in-out);
-  --transition-transform: transform var(--duration-normal) var(--ease-out);
-  --transition-all: all var(--duration-normal) var(--ease-in-out);
+   --transition-colors: color var(--duration-normal) var(--ease-in-out),
+      background-color var(--duration-normal) var(--ease-in-out),
+      border-color var(--duration-normal) var(--ease-in-out);
+   --transition-transform: transform var(--duration-normal) var(--ease-out);
+   --transition-all: all var(--duration-normal) var(--ease-in-out);
 
-  /* ═══════════════════════════════════════════
+   /* ═══════════════════════════════════════════
      LAYOUT
      ═══════════════════════════════════════════ */
 
-  --container-sm: 640px;
-  --container-md: 768px;
-  --container-lg: 1024px;
-  --container-xl: 1280px;
-  --container-2xl: 1440px;
+   --container-sm: 640px;
+   --container-md: 768px;
+   --container-lg: 1024px;
+   --container-xl: 1280px;
+   --container-2xl: 1440px;
 
-  --header-height: 4.5rem;
-  --section-padding: var(--space-16);
+   --header-height: 4.5rem;
+   --section-padding: var(--space-16);
 
-  /* ═══════════════════════════════════════════
+   /* ═══════════════════════════════════════════
      Z-INDEX SCALE
      ═══════════════════════════════════════════ */
 
-  --z-base: 0;
-  --z-dropdown: 100;
-  --z-sticky: 200;
-  --z-fixed: 300;
-  --z-modal-backdrop: 400;
-  --z-modal: 500;
-  --z-tooltip: 600;
+   --z-base: 0;
+   --z-dropdown: 100;
+   --z-sticky: 200;
+   --z-fixed: 300;
+   --z-modal-backdrop: 400;
+   --z-modal: 500;
+   --z-tooltip: 600;
 }
 
 /* ═══════════════════════════════════════════
@@ -214,19 +218,19 @@
    ═══════════════════════════════════════════ */
 
 @media (max-width: 768px) {
-  :root {
-    --text-4xl: 2.5rem;
-    --text-5xl: 3rem;
-    --text-6xl: 4rem;
-    --section-padding: var(--space-10);
-  }
+   :root {
+      --text-4xl: 2.5rem;
+      --text-5xl: 3rem;
+      --text-6xl: 4rem;
+      --section-padding: var(--space-10);
+   }
 }
 
 @media (max-width: 480px) {
-  :root {
-    --text-3xl: 1.875rem;
-    --text-4xl: 2rem;
-    --text-5xl: 2.5rem;
-    --section-padding: var(--space-8);
-  }
+   :root {
+      --text-3xl: 1.875rem;
+      --text-4xl: 2rem;
+      --text-5xl: 2.5rem;
+      --section-padding: var(--space-8);
+   }
 }

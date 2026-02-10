@@ -163,6 +163,14 @@ class IndiaMap {
     handleStateClick(stateName, languages) {
         if (languages.length === 0) return;
 
+        if (this.activeState === stateName) {
+            this.clearActiveState();
+            if (this.onStateClick) {
+                this.onStateClick(null, []);
+            }
+            return;
+        }
+
         // Update active state visual
         this.container.querySelectorAll('path').forEach(p => p.classList.remove('active'));
         const statePath = this.container.querySelector(`path[data-state="${stateName}"]`);

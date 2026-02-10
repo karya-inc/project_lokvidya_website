@@ -139,7 +139,7 @@
 }
 
 .lang-icon {
-    color: #3b82f6;
+    color: var(--gray-800);
 }
 
 .card-body-v2 {
@@ -520,7 +520,15 @@
 }
 
 .filter-chip .chip-icon {
-    font-size: var(--text-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-chip .chip-icon img,
+.badge-cat-v2 img {
+    object-fit: contain;
+    vertical-align: middle;
 }
 
 .clear-filters,
