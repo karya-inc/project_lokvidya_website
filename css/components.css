@@ -26,19 +26,19 @@
 }
 
 .btn:focus-visible {
-    outline: 2px solid var(--green-primary);
+    outline: 2px solid var(--color-impact-green);
     outline-offset: 2px;
 }
 
 /* Primary button - Green */
 .btn-primary {
-    background: var(--green-primary);
+    background: var(--color-impact-green);
     color: white;
     box-shadow: var(--shadow-green);
 }
 
 .btn-primary:hover {
-    background: var(--green-dark);
+    background: var(--color-deep-sea);
     transform: translateY(-2px);
     box-shadow: 0 12px 40px -10px rgba(34, 197, 94, 0.5);
 }
@@ -51,14 +51,14 @@
 .btn-secondary {
     background: white;
     color: var(--navy-dark);
-    border: 2px solid var(--gray-300);
+    border: 2px solid var(--color-light-grey);
 }
 
 .btn-secondary:hover {
-    border-color: var(--green-primary);
-    color: var(--green-primary);
-    background: var(--green-primary);
-    background: rgba(34, 197, 94, 0.05);
+    border-color: var(--color-impact-green);
+    color: var(--color-impact-green);
+    background: var(--color-impact-green);
+    background: rgba(var(--color-impact-green-rgb, 20, 177, 102), 0.05);
 }
 
 /* Outline button */
@@ -69,7 +69,7 @@
 }
 
 .btn-outline:hover {
-    background: var(--green-primary);
+    background: var(--color-impact-green);
     color: white;
 }
 
@@ -103,10 +103,16 @@
    ═══════════════════════════════════════════ */
 
 .archive-card {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    box-shadow: none;
-    transition: transform 0.2s;
+    background: white;
+    border: 1px solid var(--color-light-grey);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.archive-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-tech-blue);
 }
 
 .card-header-v2 {
@@ -209,36 +215,78 @@
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid #e2e8f0;
+    transition: var(--transition-all);
+}
+
+.qa-item-new.active {
+    border-color: var(--color-impact-green);
+    background: white;
+    box-shadow: var(--shadow-sm);
 }
 
 .qa-header-block {
+    width: 100%;
     padding: 16px;
-    background: rgba(34, 197, 94, 0.03);
+    background: rgba(20, 177, 102, 0.03);
     border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.qa-header-block:hover {
+    background: rgba(20, 177, 102, 0.08);
+}
+
+.q-header-content {
+    flex: 1;
 }
 
 .q-label {
     display: block;
     font-weight: var(--font-bold);
-    color: #0f172a;
-    margin-bottom: 8px;
+    color: var(--color-dark-blue);
+    margin-bottom: 4px;
     font-size: 0.95rem;
+}
+
+.qa-toggle-icon {
+    font-size: 1.2rem;
+    color: var(--color-impact-green);
+    margin-left: 12px;
+    font-weight: var(--font-bold);
 }
 
 .q-native-text {
     font-style: italic;
-    color: #475569;
+    color: var(--color-deep-sea);
     font-size: 0.9rem;
     line-height: 1.5;
 }
 
 .qa-content-block {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+}
+
+.qa-item-new.active .qa-content-block {
+    grid-template-rows: 1fr;
+}
+
+.qa-content-inner {
+    overflow: hidden;
+    padding: 0 16px;
+}
+
+.qa-item-new.active .qa-content-inner {
     padding: 16px;
-    background: white;
 }
 
 .en-text {
-    color: #1e293b;
+    color: var(--color-dark-blue);
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 12px;
@@ -461,14 +509,14 @@
 }
 
 .filter-chip:hover {
-    border-color: var(--green-primary);
-    color: var(--green-primary);
+    border-color: var(--color-impact-green);
+    color: var(--color-impact-green);
 }
 
 .filter-chip.active {
-    background: var(--green-primary);
-    border-color: var(--green-primary);
-    color: white;
+    background: var(--color-impact-green);
+    border-color: var(--color-impact-green);
+    color: var(--color-warm-gray);
 }
 
 .filter-chip .chip-icon {
@@ -508,7 +556,7 @@
     font-family: var(--font-accent);
     font-size: var(--text-4xl);
     font-weight: var(--font-bold);
-    color: var(--green-primary);
+    color: var(--color-light-grey);
     line-height: 1;
 }
 
@@ -553,8 +601,8 @@
 .form-select:focus,
 .form-textarea:focus {
     outline: none;
-    border-color: var(--green-primary);
-    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.1);
+    border-color: var(--color-impact-green);
+    box-shadow: 0 0 0 4px rgba(20, 177, 102, 0.1);
 }
 
 .form-input::placeholder,

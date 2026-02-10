@@ -51,7 +51,7 @@
 .logo-box {
     width: 36px;
     height: 36px;
-    background: var(--green-primary);
+    background: var(--color-impact-green);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -198,7 +198,7 @@
 }
 
 .hero-title .accent-text {
-    color: var(--green-primary);
+    color: var(--color-light-grey);
     position: relative;
     display: inline-block;
     padding: 0 30px;
@@ -208,22 +208,24 @@
     content: '';
     position: absolute;
     left: 0;
-    top: -15px;
-    width: 10px;
-    height: 70%;
-    background: var(--green-primary);
-    border-radius: 5px;
+    top: -25px;
+    /* Shifted UP */
+    width: 8px;
+    height: 75%;
+    background: var(--color-light-grey);
+    border-radius: 4px;
 }
 
 .hero-title .accent-text::after {
     content: '';
     position: absolute;
     right: 0;
-    bottom: -15px;
-    width: 10px;
-    height: 70%;
-    background: var(--green-primary);
-    border-radius: 5px;
+    bottom: -25px;
+    /* Shifted DOWN */
+    width: 8px;
+    height: 75%;
+    background: var(--color-light-grey);
+    border-radius: 4px;
 }
 
 .hero-subtitle {
@@ -288,7 +290,7 @@
     font-family: var(--font-accent);
     font-size: 3.5rem;
     font-weight: var(--font-bold);
-    color: var(--green-primary);
+    color: var(--color-light-grey);
     line-height: 1;
 }
 
@@ -399,36 +401,36 @@
 }
 
 .india-map path {
-    fill: var(--gray-200);
-    stroke: white;
+    fill: var(--color-light-grey);
+    stroke: var(--color-warm-gray);
     stroke-width: 1.5;
     transition: all 0.3s;
     cursor: pointer;
 }
 
 .india-map path:hover {
-    fill: var(--gray-300);
+    fill: var(--color-sea);
 }
 
 .india-map path.has-data {
-    fill: var(--teal-accent);
+    fill: var(--color-impact-green);
 }
 
 .india-map path.has-data:hover {
-    fill: var(--teal-dark);
+    fill: var(--color-deep-sea);
 }
 
 .india-map path.active {
-    fill: var(--green-primary);
-    stroke: var(--green-dark);
+    fill: var(--color-tech-blue);
+    stroke: var(--color-dark-blue);
     stroke-width: 2;
 }
 
 /* Map tooltip */
 .map-tooltip {
     position: absolute;
-    background: var(--navy-dark);
-    color: white;
+    background-color: var(--color-dark-blue) !important;
+    color: var(--color-warm-gray) !important;
     padding: var(--space-3) var(--space-4);
     border-radius: var(--radius-lg);
     font-size: var(--text-sm);
@@ -439,6 +441,7 @@
     transform: translateY(10px);
     transition: opacity 0.2s, transform 0.2s;
     max-width: 250px;
+    border: 1px solid var(--color-tech-blue);
 }
 
 .map-tooltip.visible {
@@ -687,9 +690,10 @@
    ═══════════════════════════════════════════ */
 
 .footer {
-    background: var(--navy-dark);
-    color: var(--gray-300);
+    background: var(--color-dark-blue);
+    color: var(--color-light-grey);
     padding: var(--space-16) 0 var(--space-8);
+    border-top: 1px solid var(--color-deep-sea);
 }
 
 .footer-container {
@@ -700,7 +704,7 @@
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: var(--space-12);
     margin-bottom: var(--space-12);
 }
@@ -794,10 +798,14 @@
 }
 
 .footer-links a {
-    color: var(--gray-400);
+    color: var(--color-sea);
     text-decoration: none;
     font-size: var(--text-sm);
     transition: var(--transition-colors);
+}
+
+.footer-links a:hover {
+    color: var(--color-lime);
 }
 
 .footer-links a:hover {

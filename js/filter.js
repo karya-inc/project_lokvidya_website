@@ -102,36 +102,61 @@ class ArchiveFilter {
     const language = LANGUAGES.find(l => l.id === item.language);
     const category = CATEGORIES.find(c => c.id === item.category);
 
-    if (item.category === 'folksongs' && item.questions) {
-      return this.renderFolksongCard(item, language, category);
-    } else if (item.images) {
-      return this.renderImageCard(item, language, category);
-    }
-    return this.renderTextCard(item, language, category);
+    return this.renderUnifiedCard(item, language, category);
   }
 
-  renderFolksongCard(item, language, category) {
-    const questionsHtml = FOLKSONG_QUESTIONS.map((q, i) => {
-      const answer = item.questions[q.id];
-      // Mocking native questions if not in data, but using real ones when possible
-      const nativeQ = q.as || '';
+  renderUnifiedCard(item, language, category) {
+    const questionsHtml = Object.keys(item.questions || {}).map((qId, i) => {
+      const answer = item.questions[qId];
+      // Get predefined question text if available, otherwise use key formatted
+      const qText = this.getQuestionText(qId);
+
       return `
-        <div class="qa-item-new">
-          <div class="qa-header-block">
-            <span class="q-label">Q${i + 1}: ${q.en}</span>
-            <div class="q-native-text">${this.getNativeQuestion(q.id, item.language) || ''}</div>
-          </div>
+        <div class="qa-item-new collapsible">
+          <button class="qa-header-block" aria-expanded="false">
+            <div class="q-header-content">
+              <span class="q-label">Q${i + 1}: ${qText}</span>
+            </div>
+            <span class="qa-toggle-icon">＋</span>
+          </button>
           <div class="qa-content-block">
-            <p class="en-text">${answer.en}</p>
-            <div class="qa-divider"></div>
-            <p class="native-text-italic">${answer.native}</p>
+            <div class="qa-content-inner">
+              <p class="en-text">${answer.en}</p>
+              <div class="qa-divider"></div>
+              <p class="native-text-italic">${answer.native}</p>
+            </div>
           </div>
         </div>
       `;
     }).join('');
 
+    const mediaHtml = item.type === 'audio'
+      ? `
+        <div class="audio-player-v2">
+          <div class="player-inner">
+            <button class="player-btn">▶</button>
+            <div class="player-time">0:00 / ${item.duration || '0:00'}</div>
+            <div class="player-progress">
+              <div class="progress-bar"></div>
+              <div class="progress-thumb"></div>
+            </div>
+          </div>
+        </div>
+      `
+      : (item.images ? `
+        <div class="image-gallery-v2">
+          <div class="thumbs-row-v2">
+            ${item.images.map((img, i) => `
+              <div class="thumb-item" data-index="${i}" data-entry="${item.id}">
+                <span class="thumb-placeholder">${img.placeholder}</span>
+              </div>
+            `).slice(0, 5).join('')}
+          </div>
+        </div>
+      ` : '');
+
     return `
-      <article class="card archive-card folksong-card-v2" data-id="${item.id}">
+      <article class="card archive-card unified-card-v2" data-id="${item.id}">
         <div class="card-header-v2">
           <span class="badge badge-cat-v2" style="background: ${category.color}15; color: ${category.color};">
             ${category.icon} ${category.name}
@@ -141,18 +166,8 @@ class ArchiveFilter {
           </span>
         </div>
         <div class="card-body-v2">
-          <div class="audio-player-v2">
-            <div class="player-inner">
-              <button class="player-btn">▶</button>
-              <div class="player-time">0:00 / 7:05</div>
-              <div class="player-progress">
-                <div class="progress-bar"></div>
-                <div class="progress-thumb"></div>
-              </div>
-              <div class="player-vol">🔊</div>
-              <div class="player-opt">⋮</div>
-            </div>
-          </div>
+          <h3 class="card-title-v2">${item.title}</h3>
+          ${mediaHtml}
           <div class="qa-list-v2">${questionsHtml}</div>
         </div>
         <div class="card-footer-v2">
@@ -168,94 +183,48 @@ class ArchiveFilter {
     `;
   }
 
-  renderImageCard(item, language, category) {
-    const thumbsHtml = item.images.map((img, i) => {
-      return `
-        <div class="thumb-item" data-index="${i}" data-entry="${item.id}">
-          <span class="thumb-placeholder">${img.placeholder}</span>
-        </div>
-      `;
-    }).slice(0, 5).join('');
-
-    return `
-      <article class="card archive-card image-card-v2" data-id="${item.id}">
-        <div class="card-header-v2">
-          <span class="badge badge-cat-v2" style="background: ${category.color}15; color: ${category.color};">
-            ${category.icon} ${category.name}
-          </span>
-          <span class="badge-lang-v2">
-            <span class="lang-icon">🌐</span> ${language.name}
-          </span>
-        </div>
-        <div class="card-body-v2">
-          <div class="image-gallery-v2">
-            <div class="thumbs-row-v2">${thumbsHtml}</div>
-          </div>
-          
-          <div class="content-block-v2">
-            <div class="block-label-v2">ORIGINAL (${language.name.toUpperCase()})</div>
-            <p class="block-text-v2">${item.content ? item.content.native : ''}</p>
-          </div>
-
-          <div class="content-block-v2">
-            <div class="block-label-v2">HINDI TRANSLATION</div>
-            <p class="block-text-v2">${item.content ? item.content.hindi : ''}</p>
-          </div>
-        </div>
-        <div class="card-footer-v2">
-          <div class="contributor-v2">
-            <div class="avatar-v2">${item.contributor.charAt(0)}</div>
-            <div class="contributor-info-v2">
-              <div class="name-v2">${item.contributor}</div>
-              <div class="role-v2">Contributor</div>
-            </div>
-          </div>
-        </div>
-      </article>
-    `;
-  }
-
-  // Helper for native questions (simplified for now)
-  getNativeQuestion(id, langId) {
-    const questions = {
-      'about_song': {
-        'assamese': 'এই গীতটো কিহৰ বিষয়ে আৰু পৰম্পৰাগতভাৱে কোন কোন উপলক্ষত গোৱা হয়?',
-        'mundari': 'इन गीत बरा दिसुम रे गाइ जाना? सरहुल परब रे?'
-      }
+  getQuestionText(id) {
+    const folksongQuestions = {
+      'about_song': 'What is this song about?',
+      'tradition_origin': 'Who taught you this song?',
+      'language_details': 'What language/dialect is this in?',
+      'performance_style': 'Is this song accompanied by instruments?'
     };
-    return (questions[id] && questions[id][langId]) ? questions[id][langId] : '';
+
+    if (folksongQuestions[id]) return folksongQuestions[id];
+
+    // Fallback for other categories
+    return id.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   }
 
-  renderTextCard(item, language, category) {
-    return `
-      <article class="card archive-card text-card-v2" data-id="${item.id}">
-        <div class="card-header-v2">
-          <span class="badge badge-cat-v2" style="background: ${category.color}15; color: ${category.color};">
-            ${category.icon} ${category.name}
-          </span>
-          <span class="badge-lang-v2">
-            <span class="lang-icon">🌐</span> ${language.name}
-          </span>
-        </div>
-        <div class="card-body-v2">
-          <h3 class="card-title-v2">${item.title}</h3>
-          <p class="card-text-v2">${item.description || ''}</p>
-        </div>
-        <div class="card-footer-v2">
-          <div class="contributor-v2">
-            <div class="avatar-v2">${item.contributor.charAt(0)}</div>
-            <div class="contributor-info-v2">
-              <div class="name-v2">${item.contributor}</div>
-              <div class="role-v2">Contributor</div>
-            </div>
-          </div>
-        </div>
-      </article>
-    `;
-  }
 
   setupAccordions() {
-    // Legacy support or remove if not needed
+    document.querySelectorAll('.qa-header-block').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.qa-item-new');
+        const isExpanded = item.classList.contains('active');
+
+        // Close other items in the same list
+        const parentList = item.closest('.qa-list-v2');
+        if (parentList) {
+          parentList.querySelectorAll('.qa-item-new').forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('active');
+              const otherHeader = otherItem.querySelector('.qa-header-block');
+              if (otherHeader) {
+                otherHeader.setAttribute('aria-expanded', 'false');
+                otherHeader.querySelector('.qa-toggle-icon').textContent = '＋';
+              }
+            }
+          });
+        }
+
+        // Toggle current item
+        item.classList.toggle('active');
+        header.setAttribute('aria-expanded', !isExpanded);
+        header.querySelector('.qa-toggle-icon').textContent = isExpanded ? '＋' : '－';
+      });
+    });
   }
 
   setupImageClicks() {

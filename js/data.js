@@ -19,7 +19,8 @@ const LANGUAGES = [
   { id: 'sadri', name: 'Sadri', nativeName: 'सादरी', region: 'East India', state: 'Jharkhand' },
   { id: 'khortha', name: 'Khortha', nativeName: 'खोरठा', region: 'East India', state: 'Jharkhand' },
   { id: 'deuri', name: 'Deuri', nativeName: 'Deuri', region: 'Northeast', state: 'Assam' },
-  { id: 'kaman-mishmi', name: 'Kaman Mishmi', nativeName: 'Kaman', region: 'Northeast', state: 'Arunachal Pradesh' }
+  { id: 'kaman-mishmi', name: 'Kaman Mishmi', nativeName: 'Kaman', region: 'Northeast', state: 'Arunachal Pradesh' },
+  { id: 'bhojpuri', name: 'Bhojpuri', nativeName: 'भोजपुरी', region: 'North India', state: 'Bihar' }
 ];
 
 const CATEGORIES = [
@@ -141,9 +142,15 @@ const archiveData = [
       { id: 4, description: 'बांस का जंगल', placeholder: '🌿' },
       { id: 5, description: 'बांस के उत्पाद बाज़ार में', placeholder: '🏪' }
     ],
-    content: {
-      native: 'ई बास हके ईकी हमरे मन आपन बारी यातो अंगना आस पास लगाइल इकर से बास कर बहुत सामन बनेला जेकी सुफ दौरा ओड़िया इसब बनेला और इके बाजार में बेचीला जेकर से हमरे कर दू पैसा होवेला',
-      hindi: 'ये बांस का पेड़ है इसको हमलोग अपना आंगन या बारी में लगाते हैं। इससे बहुत ही समान बनता है जैसे की सूप, दौरा, ओड़िया। इस सब को बनाकर बाजार में भेजते हैं जिससे कि हम लोगों को दो पैसा मिलता है। घर का थोड़ा बहुत मदद हो जाता है।'
+    questions: {
+      about_item: {
+        native: 'ई बास हके ईकी हमरे मन आपन बारी यातो अंगना आस पास लगाइल इकर से बास कर बहुत सामन बनेला जेकी सुफ दौरा ओड़िया इसब बनेला।',
+        en: 'This is the bamboo tree we plant in our yards. It is used to make essential items like baskets (suph, doura, odia).'
+      },
+      benefits: {
+        native: 'और इके बाजार में बेचीला जेकर से हमरे कर दू पैसा होवेला',
+        en: 'We sell these products in the market, which provides us with a small income to help support the household.'
+      }
     }
   },
   {
@@ -181,9 +188,11 @@ const archiveData = [
       { id: 4, description: 'Tattooed elder', placeholder: '👴' },
       { id: 5, description: 'Community longhouse', placeholder: '🏠' }
     ],
-    content: {
-      native: 'Hamara warrior tradition bohut purana ase. Headdress mein hornbill feather thake, bravery se earn kore. Tattoo laga mane story ase.',
-      hindi: 'हमारी योद्धा परंपराएं कई पीढ़ियों पुरानी हैं। योद्धाओं द्वारा पहना जाने वाला मुकुट में हॉर्नबिल पंख होते हैं, जो बहादुरी के कार्यों से अर्जित होते हैं। हर टैटू एक कहानी बताता है।'
+    questions: {
+      about_tradition: {
+        native: 'Hamara warrior tradition bohut purana ase. Headdress mein hornbill feather thake, bravery se earn kore. Tattoo laga mane story ase.',
+        en: 'Our warrior traditions go back generations. The headdress features hornbill feathers earned through acts of bravery. Every tattoo tells a story.'
+      }
     }
   },
 
@@ -203,9 +212,15 @@ const archiveData = [
       { id: 4, description: 'Harvest time', placeholder: '🚜' },
       { id: 5, description: 'Grain storage', placeholder: '🏺' }
     ],
-    content: {
-      native: 'चंद्र तिथि देख के बोवाई करते। बैल से हल चलाते। अलग अलग धान लगाते।',
-      hindi: 'हम रोपाई के लिए चंद्र कैलेंडर का पालन करते हैं। मिट्टी को बैलों द्वारा खींचे जाने वाले लकड़ी के हलों से तैयार किया जाता है। हम अलग-अलग भूभाग के लिए कई धान की किस्में उगाते हैं।'
+    questions: {
+      about_cultivation: {
+        native: 'चंद्र तिथि देख के बोवाई करते। बैल से हल चलाते। अलग अलग धान लगाते।',
+        en: 'We follow the lunar calendar for planting. Soil is prepared with wooden ploughs pulled by bullocks.'
+      },
+      varieties: {
+        native: 'मिट्टी को बैलों द्वारा खींचे जाने वाले लकड़ी के हलों से तैयार किया जाता है।',
+        en: 'We grow several varieties of paddy suited for different terrains.'
+      }
     }
   },
   {
@@ -223,9 +238,15 @@ const archiveData = [
       { id: 4, description: 'Women in jhum field', placeholder: '👩‍🌾' },
       { id: 5, description: 'Fallow land regenerating', placeholder: '🌳' }
     ],
-    content: {
-      native: 'Jhum cultivation hamara purana tarika ase. Clear kore, burn kore, lagaye, phir land rest dete. Pahile 15-20 saal cycle thakise.',
-      hindi: 'झूम पीढ़ियों से प्रचलित स्थानांतरित खेती है। हम साफ करते हैं, जलाते हैं, बोते हैं, और फिर जमीन को आराम देते हैं। पहले चक्र 15-20 साल का था।'
+    questions: {
+      about_jhum: {
+        native: 'Jhum cultivation hamara purana tarika ase. Clear kore, burn kore, lagaye, phir land rest dete.',
+        en: 'Jhum is shifting cultivation practiced for generations. We clear, burn, sow, and then let the land rest.'
+      },
+      cycle: {
+        native: 'Pahile 15-20 saal cycle thakise.',
+        en: 'Earlier the fallow cycle used to be 15-20 years for fertility recovery.'
+      }
     }
   },
 
@@ -245,9 +266,11 @@ const archiveData = [
       { id: 4, description: 'Rare orchids', placeholder: '🌸' },
       { id: 5, description: 'Community protection', placeholder: '🛡️' }
     ],
-    content: {
-      native: 'Law kyntang ka long ki rim ka jingialang. Ym lah buh tap dieng. Ki blei bad ki tymmen ki shong hajan.',
-      hindi: 'लॉ क्यंटांग सदियों से संरक्षित पवित्र वन हैं। कोई पेड़ नहीं काटा जा सकता। ये हमारे देवताओं और पूर्वजों के घर हैं। कई दुर्लभ प्रजातियां केवल यहीं बची हैं।'
+    questions: {
+      about_groves: {
+        native: 'Law kyntang ka long ki rim ka jingialang. Ym lah buh tap dieng. Ki blei bad ki tymmen ki shong hajan.',
+        en: 'Law Kyntang are sacred forests protected for centuries. No tree can be cut as they are homes of gods and ancestors.'
+      }
     }
   },
   {
@@ -265,9 +288,11 @@ const archiveData = [
       { id: 4, description: 'Healing ceremony', placeholder: '✨' },
       { id: 5, description: 'Teaching next generation', placeholder: '👨‍🏫' }
     ],
-    content: {
-      native: 'जंगल हमार दवाखाना हे। हर बीमारी के पेड़-पौधा से इलाज हे। सैकड़ों दवाई जानत हन।',
-      hindi: 'जंगल हमारी फार्मेसी है। हर बीमारी के लिए एक पौधे का इलाज है। हम सैकड़ों उपचार जानते हैं - बुखार, घाव, पेट दर्द, यहां तक कि सांप के काटने के लिए भी।'
+    questions: {
+      about_plants: {
+        native: 'जंगल हमार दवाखाना हे। हर बीमारी के पेड़-पौधा से इलाज हे। सैकड़ों दवाई जानत हन।',
+        en: 'The forest is our pharmacy. There is a plant-based cure for every ailment. We know hundreds of remedies.'
+      }
     }
   },
 
@@ -287,9 +312,11 @@ const archiveData = [
       { id: 4, description: 'Kanghou stir-fry', placeholder: '🥬' },
       { id: 5, description: 'Banana leaf serving', placeholder: '🍌' }
     ],
-    content: {
-      native: 'মৈতৈ চাক অসি ঙারী, অঙাংবা, অরু অমাগী মতৌ। চকমা খৎনবা ৱাৎপা য়াৰোই।',
-      hindi: 'मैतेई भोजन किण्वित मछली (नगरी), ताजी सब्जियों और चावल पर आधारित है। कोई भी भोजन किण्वित सामग्री के बिना पूर्ण नहीं है। बहुत स्वस्थ और स्वादिष्ट।'
+    questions: {
+      about_cuisine: {
+        native: 'মৈতৈ চাক অসি ঙারী, অঙাংবা, অরু অমাগী মতৌ। চকমা খৎনবা ৱাৎপা য়াৰোই।',
+        en: 'Meitei food is based on fermented fish (ngari), fresh vegetables, and rice. No meal is complete without fermented ingredients.'
+      }
     }
   },
   {
@@ -307,9 +334,11 @@ const archiveData = [
       { id: 4, description: 'Dried greens storage', placeholder: '📦' },
       { id: 5, description: 'Selling at weekly haat', placeholder: '🏪' }
     ],
-    content: {
-      native: 'दा टायम रे बीर होरो रे साग-पात भरल। तीस-चालीस किसिम जानते। कोय खून के, कोय हड्डी के।',
-      hindi: 'मानसून के दौरान जंगल और खेत खाने योग्य साग से भरे होते हैं। हम 30-40 किस्में जानते हैं - कुछ खून के लिए, कुछ हड्डियों के लिए, कुछ गर्मी में शरीर ठंडा करने के लिए।'
+    questions: {
+      about_greens: {
+        native: 'दा टायम रे बीर होरो रे साग-पात भरल। तीस-चालीस किसिम जानते। कोय खून के, कोय हड्डी के।',
+        en: 'During monsoon, forests and fields are full of edible greens. We know 30-40 varieties for blood and bones.'
+      }
     }
   },
 
@@ -329,9 +358,11 @@ const archiveData = [
       { id: 4, description: 'Finished ceremonial cloth', placeholder: '👗' },
       { id: 5, description: 'Young girl learning', placeholder: '👧' }
     ],
-    content: {
-      native: 'মৈতৈ নুপী খুদিংমক ফী শোকপী খংই। ফীগী মওং অমদি অর্থ অমা লৈ।',
-      hindi: 'हर मैतेई महिला बुनाई सीखती है। पैटर्न के अर्थ हैं - मंदिर मोटिफ, ड्रैगन पैटर्न, फूल डिजाइन। पारंपरिक कपड़े केवल हथकरघे के होते हैं।'
+    questions: {
+      about_handloom: {
+        native: 'মৈতৈ নুপী খুদিংমক ফী শোকপী খংই। ফীগী মওং অমদি অর্থ অমা লৈ।',
+        en: 'Every Meitei woman learns to weave. Patterns like temple motifs and dragon designs have deep meanings.'
+      }
     }
   },
   {
@@ -349,9 +380,34 @@ const archiveData = [
       { id: 4, description: 'Open firing pottery', placeholder: '🔥' },
       { id: 5, description: 'Finished ritual vessels', placeholder: '⚱️' }
     ],
-    content: {
-      native: 'Deuri pottery chaka lagaye nai banaye. Coil method use kore. Different shape ritual ke liye - pani, chawal, offering.',
-      hindi: 'देउरी मिट्टी के बर्तन कुम्हार के चाक के बिना बनाये जाते हैं। कुंडल विधि का उपयोग किया जाता है। अलग-अलग आकार अनुष्ठानों के लिए - पानी, चावल, चढ़ावे के बर्तन। महिलाएं ही कुम्हार होती हैं।'
+    questions: {
+      about_pottery: {
+        native: 'Deuri pottery chaka lagaye nai banaye. Coil method use kore. Different shape ritual ke liye.',
+        en: 'Deuri pottery is made without a potter\'s wheel using the coil method. Different shapes are for rituals.'
+      }
+    },
+  },
+  {
+    id: 15,
+    title: 'Madhubani Painting Traditions',
+    language: 'bhojpuri',
+    category: 'culture',
+    type: 'images',
+    contributor: 'रश्मि देवी',
+    date: '2025-11-10',
+    images: [
+      { id: 1, description: 'Traditional wall art', placeholder: '🎨' },
+      { id: 2, description: 'Natural color preparation', placeholder: '🌿' }
+    ],
+    questions: {
+      about_art: {
+        native: 'मधुबनी पेंटिंग हमनी के पुरान कला ह। इमें प्राकृतिक रंग के प्रयोग होला।',
+        en: 'Madhubani painting is our ancient art form. It uses natural colors derived from plants and minerals.'
+      },
+      process: {
+        native: 'पहिले इ सिर्फ दीवार पर बनत रहे, अब कागज अउर कपड़ा पर भी बनेला।',
+        en: 'Initially it was only done on walls, but now it is also practiced on paper and cloth.'
+      }
     }
   }
 ];
@@ -381,5 +437,6 @@ const stateLanguages = {
   'nagaland': ['nagamese'],
   'arunachal-pradesh': ['wangcho', 'kaman-mishmi'],
   'meghalaya': ['khasi'],
-  'manipur': ['meitei']
+  'manipur': ['meitei'],
+  'bihar': ['bhojpuri']
 };
