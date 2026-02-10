@@ -5,11 +5,9 @@
  */
 
 const LANGUAGES = [
-  { id: 'english', name: 'English', region: 'Pan-India', state: 'Multiple' },
-  { id: 'hindi', name: 'Hindi', nativeName: 'हिंदी', region: 'North India', state: 'Multiple' },
   { id: 'mundari', name: 'Mundari', nativeName: 'मुंडारी', region: 'East India', state: 'Jharkhand' },
   { id: 'ho', name: 'Ho', nativeName: 'हो', region: 'East India', state: 'Jharkhand' },
-  { id: 'santhali', name: 'Santhali', nativeName: 'সাঁওতালি', region: 'East India', state: 'Jharkhand' },
+  { id: 'santhali', name: 'Santhali', nativeName: 'সাঁওতালি', region: 'East India', state: 'Bihar' },
   { id: 'assamese', name: 'Assamese', nativeName: 'অসমীয়া', region: 'Northeast', state: 'Assam' },
   { id: 'bodo', name: 'Bodo', nativeName: 'बड़ो', region: 'Northeast', state: 'Assam' },
   { id: 'meitei', name: 'Meitei', nativeName: 'মৈতৈ', region: 'Northeast', state: 'Manipur' },
@@ -17,7 +15,7 @@ const LANGUAGES = [
   { id: 'nagamese', name: 'Nagamese', nativeName: 'Nagamese', region: 'Northeast', state: 'Nagaland' },
   { id: 'wangcho', name: 'Wangcho', nativeName: 'Wangcho', region: 'Northeast', state: 'Arunachal Pradesh' },
   { id: 'sadri', name: 'Sadri', nativeName: 'सादरी', region: 'East India', state: 'Jharkhand' },
-  { id: 'khortha', name: 'Khortha', nativeName: 'खोरठा', region: 'East India', state: 'Jharkhand' },
+  { id: 'khortha', name: 'Khortha', nativeName: 'खोरठा', region: 'East India', state: 'Bihar' },
   { id: 'deuri', name: 'Deuri', nativeName: 'Deuri', region: 'Northeast', state: 'Assam' },
   { id: 'kaman-mishmi', name: 'Kaman Mishmi', nativeName: 'Kaman', region: 'Northeast', state: 'Arunachal Pradesh' }
 ];
@@ -159,7 +157,7 @@ const archiveData = [
   {
     id: 4,
     title: 'बांस का पेड़ - Bamboo Tradition',
-    language: 'hindi',
+    language: 'sadri',
     category: 'culture',
     type: 'images',
     contributor: 'रानी कुमारी',
@@ -438,11 +436,11 @@ function getStats() {
 }
 
 const stateLanguages = {
-  'jharkhand': ['sadri', 'mundari', 'ho', 'santhali', 'khortha'],
-  'assam': ['assamese', 'bodo', 'deuri'],
+  'jharkhand': ['ho', 'sadri', 'mundari'],
+  'assam': ['bodo', 'assamese', 'deuri'],
   'nagaland': ['nagamese'],
   'arunachal-pradesh': ['wangcho', 'kaman-mishmi'],
   'meghalaya': ['khasi'],
   'manipur': ['meitei'],
-  'bihar': ['sadri']
+  'bihar': ['khortha', 'santhali']
 };
