@@ -201,12 +201,12 @@ function initMap() {
  */
 function initMobileMenu() {
     const menuToggle = document.querySelector('.menu-toggle');
-    const mobileNav = document.querySelector('.mobile-nav');
+    const nav = document.querySelector('.nav');
 
-    if (!menuToggle || !mobileNav) return;
+    if (!menuToggle || !nav) return;
 
     menuToggle.addEventListener('click', () => {
-        mobileNav.classList.toggle('active');
+        nav.classList.toggle('active');
         menuToggle.classList.toggle('active');
         document.body.classList.toggle('menu-open');
     });
@@ -216,10 +216,10 @@ function initMobileMenu() {
  * Close mobile menu
  */
 function closeMobileMenu() {
-    const mobileNav = document.querySelector('.mobile-nav');
+    const nav = document.querySelector('.nav');
     const menuToggle = document.querySelector('.menu-toggle');
 
-    if (mobileNav) mobileNav.classList.remove('active');
+    if (nav) nav.classList.remove('active');
     if (menuToggle) menuToggle.classList.remove('active');
     document.body.classList.remove('menu-open');
 }
