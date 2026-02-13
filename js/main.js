@@ -11,7 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
 /**
  * Initialize the application
  */
-function initApp() {
+async function initApp() {
+    // Load archive data from JSON first
+    await loadArchiveData();
+
     // Initialize components
     initHeader();
     initSmoothScroll();

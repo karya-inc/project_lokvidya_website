@@ -1,0 +1,345 @@
+{
+    "languages": [
+        {
+            "id": "mundari",
+            "name": "Mundari",
+            "nativeName": "मुंडारी",
+            "region": "East India",
+            "state": "Jharkhand"
+        },
+        {
+            "id": "ho",
+            "name": "Ho",
+            "nativeName": "हो",
+            "region": "East India",
+            "state": "Jharkhand"
+        },
+        {
+            "id": "santhali",
+            "name": "Santhali",
+            "nativeName": "সাঁওতালি",
+            "region": "East India",
+            "state": "Bihar"
+        },
+        {
+            "id": "assamese",
+            "name": "Assamese",
+            "nativeName": "অসমীয়া",
+            "region": "Northeast",
+            "state": "Assam"
+        },
+        {
+            "id": "bodo",
+            "name": "Bodo",
+            "nativeName": "बड़ो",
+            "region": "Northeast",
+            "state": "Assam"
+        },
+        {
+            "id": "meitei",
+            "name": "Meitei",
+            "nativeName": "মৈতৈ",
+            "region": "Northeast",
+            "state": "Manipur"
+        },
+        {
+            "id": "khasi",
+            "name": "Khasi",
+            "nativeName": "Khasi",
+            "region": "Northeast",
+            "state": "Meghalaya"
+        },
+        {
+            "id": "nagamese",
+            "name": "Nagamese",
+            "nativeName": "Nagamese",
+            "region": "Northeast",
+            "state": "Nagaland"
+        },
+        {
+            "id": "wangcho",
+            "name": "Wangcho",
+            "nativeName": "Wangcho",
+            "region": "Northeast",
+            "state": "Arunachal Pradesh"
+        },
+        {
+            "id": "sadri",
+            "name": "Sadri",
+            "nativeName": "सादरी",
+            "region": "East India",
+            "state": "Jharkhand"
+        },
+        {
+            "id": "khortha",
+            "name": "Khortha",
+            "nativeName": "खोरठा",
+            "region": "East India",
+            "state": "Bihar"
+        },
+        {
+            "id": "deuri",
+            "name": "Deuri",
+            "nativeName": "Deuri",
+            "region": "Northeast",
+            "state": "Assam"
+        },
+        {
+            "id": "kaman-mishmi",
+            "name": "Kaman Mishmi",
+            "nativeName": "Kaman",
+            "region": "Northeast",
+            "state": "Arunachal Pradesh"
+        }
+    ],
+    "categories": [
+        {
+            "id": "folksongs",
+            "name": "Folksongs",
+            "icon_asset": "assets/music-note.png",
+            "color": "#166176"
+        },
+        {
+            "id": "agriculture",
+            "name": "Agriculture",
+            "icon_asset": "assets/sprout.png",
+            "color": "#00AFDF"
+        },
+        {
+            "id": "forest",
+            "name": "Forest",
+            "icon_asset": "assets/trees.png",
+            "color": "#14B166"
+        },
+        {
+            "id": "food",
+            "name": "Food/Nutrition",
+            "icon_asset": "assets/noun-food-7999827.png",
+            "color": "#D8FA70"
+        },
+        {
+            "id": "culture",
+            "name": "Culture/Traditions",
+            "icon_asset": "assets/parthenon.png",
+            "color": "#8FE7FF"
+        },
+        {
+            "id": "other",
+            "name": "Other",
+            "icon_asset": "assets/application.png",
+            "color": "#94A3B8"
+        }
+    ],
+    "folksong_questions": [
+        {
+            "id": "about_song",
+            "en": "What is this song about, and on what occasions is it traditionally sung?"
+        },
+        {
+            "id": "tradition_origin",
+            "en": "Who taught you this song, and how old is this tradition?"
+        },
+        {
+            "id": "language_details",
+            "en": "What language/dialect is this in, and are there any special words or phrases that have particular meanings?"
+        },
+        {
+            "id": "performance_style",
+            "en": "Is this song accompanied by any instruments, dance, or gestures, and is it sung solo or in groups?"
+        }
+    ],
+    "entries": [
+        {
+            "id": 4,
+            "language": "sadri",
+            "category": "agriculture",
+            "worker_name": "अनु सिंह",
+            "pictures": [
+                "assets/sadri_d1.png"
+            ],
+            "audio": "assets/audio/Sadri/datapoint_1.wav",
+            "about_image": "इ मड़ुवा कर खेती हेके। इकर मे गेहूं कर आटा से भी ज्यादा फायदा है। मड़ुआ कर आटा के शुगर में खाले शरीर के बहुत फायदा होवेला।",
+            "hindi_translation": "यह मड़वा का खेती है इसमें गेहूं का आटा से भी ज्यादा फायदा होता है मड़वा का आटा को खाने में शरीर में बहुत फायदा होता है ।"
+        },
+        {
+            "id": 5,
+            "language": "sadri",
+            "category": "food",
+            "worker_name": "राघिका देवी",
+            "pictures": [
+                "assets/sadri_d2.png"
+            ],
+            "audio": "assets/audio/Sadri/datapoint_2.wav",
+            "about_image": "इके चावर बरी कहेना इके बनाऐक ले सब से पहिले चावर के भींजाये के उकर बाद पिस के फिर गुडी के पानी देइके सिझायना उकर बाद मंगरैला जवाइन नमक सोडा देइके पारेना फिर उके छाईन के खायेना",
+            "hindi_translation": "इसको चावल बड़ी कहते हैं इसको बनाने के लिए सबसे पहले चावल को भिंगा के उसके बाद पीस के फिर पिसा हुआ गुड्डी को पानी देकर बोऐल करते हैं उसके बाद उसमें मंगरैला जवाइन नमक सोडा को मिला के पारते हैं फिर उसके बाद उसको छान के खाते हैं"
+        },
+        {
+            "id": 6,
+            "language": "deuri",
+            "category": "forest",
+            "worker_name": "Pushpalata Deori",
+            "pictures": [
+                "assets/deuri_d1.jpg"
+            ],
+            "audio": "assets/audio/Deuri/datapoint_1.wav",
+            "about_image": "dimoru popo",
+            "hindi_translation": "dimoru"
+        },
+        {
+            "id": 7,
+            "language": "deuri",
+            "category": "forest",
+            "worker_name": "Shankar deori",
+            "pictures": [
+                "assets/deuri_d2.png"
+            ],
+            "audio": "assets/audio/Deuri/datapoint_2.wav",
+            "about_image": "ok",
+            "hindi_translation": "ok"
+        },
+        {
+            "id": 8,
+            "language": "bodo",
+            "category": "food",
+            "worker_name": "Mili Brahma",
+            "pictures": [
+                "assets/bodo_d1.png"
+            ],
+            "audio": "assets/audio/Bodo/datapoint_1.wav",
+            "about_image": "Saogari ao hwnai bilai aa jabai khipi bendwng. Kipi bengdwng khwo sajwng are singjwngbw khebnanwi dinthinai jabai. Jwng khipi bendwngni bilaikhwo khananwi dao eba najwng",
+            "hindi_translation": "The creeper shown is Paederia Foetida. It's used to cure any kind of stomach ailments. It's also good source of Iodine. It's often boiled with chicken or stew for consumption."
+        },
+        {
+            "id": 9,
+            "language": "bodo",
+            "category": "culture",
+            "worker_name": "Mili Brahma",
+            "pictures": [
+                "assets/bodo_d2.png"
+            ],
+            "audio": "assets/audio/Bodo/datapoint_2.wav",
+            "about_image": "Biyw jabai magw domasi ni ek tharik din ao sun awngkarnaini sigang, daosin daola awngkharnai ni sigangaonw bakhri lerw. Bakhrikhwo gwbwrkhi jwng lerw arw gwthar",
+            "hindi_translation": "This is the tradition of wall plastering of Bakhri or the grain house on the day of magw Domasi. this is done before sunrise and before the birds wake up. The birds should not see while plastering the walls"
+        },
+        {
+            "id": 10,
+            "language": "khasi",
+            "category": "agriculture",
+            "worker_name": "Zoya Kharmalki",
+            "pictures": [
+                "assets/khasi_d1.png"
+            ],
+            "audio": "assets/audio/Khasi/datapoint_1.wav",
+            "about_image": "Une u dei u sohling, phin ioh tang na ka ri Khasi bad Jaintia jong ngi. U long u soh uba blad ka jingmad patde u long ruh uba shngiam ban bam bad pyngngad. Ngi ju tah ne ber bad ka mluh shuwa ba ngin bam ia u.",
+            "hindi_translation": ""
+        },
+        {
+            "id": 11,
+            "language": "khasi",
+            "category": "agriculture",
+            "worker_name": "Daman",
+            "pictures": [
+                "assets/khasi_d2.png"
+            ],
+            "audio": "assets/audio/Khasi/datapoint_2.wav",
+            "about_image": "Une u dei u Symbai jajew, Ia u jajew la ju ioh bha na ki thain Ri Bhoi District. Bun ki nong bhoi ki ju shet bha ia u jajew bad u long uba bang bad pyngngad bha ban bam ia ka. Ka long ruh kaba tei ia ka met ka phad.",
+            "hindi_translation": ""
+        },
+        {
+            "id": 12,
+            "language": "kaman-mishmi",
+            "category": "other",
+            "worker_name": "Roshni Krisikro",
+            "pictures": [
+                "assets/kama_d1.png"
+            ],
+            "audio": "assets/audio/kaman mishmi/datapoint_1.wav",
+            "about_image": "ann wei khrab domtoh , ann wan hul san wei tano , talu hi tahu kang pimtoh ,kgit kgit khrab wan siumtaw , kamo khrab wan kamo kgit wei domtoh chapui faineh ratt talu fratman, talu wei rat chan kabring wei chn pimtoh , wara tano ,changrang phrat mang rat hul san wei pimtoh pak wei rat calender tuwa maka rat wahi khrab hi thongneh tuwattaw rat humtaw.",
+            "hindi_translation": "Khrabb is a rituals object used in mishmi pujas like tano , thung, talu etc.It is distributed as a short calender and also as an invitation.each knot in the khrabb represent one day, and by counting the knots people know the date of the puja. Only in tano puja mishmi priest are invited by the khrabb"
+        },
+        {
+            "id": 13,
+            "language": "kaman-mishmi",
+            "category": "other",
+            "worker_name": "Deepasi Dellang",
+            "pictures": [
+                "assets/kama_d2.png"
+            ],
+            "audio": "assets/audio/kaman mishmi/datapoint_2.wav",
+            "about_image": "An wan \"Humbaram\" (Fermented soya bean) . An wan shao hamang , Humbaram an wan Balae (soyabean) ka achao nai hamang . an wan barong kayin sam kasar nak kakiyar . kasar wan baar ne ka kasar phu kat nam tao hamang . Kakiyar wan ko boyan hi shan ne ka tha man tao hamang. An wan niyam man hamang wahi chaong yong mara tao hamang. Humbaram an wan tilang , wifha so hamank man hamang",
+            "hindi_translation": "it is called \"Humbaram\" (Fermented Soya bean) . it is a local soyabean ball .it is made of soya (Balae) which is grown in farms locally. Humbaram are of two type one is dry and other is semi grevy texture. The dry one is made into small ball and keep it for drying while the semi gravy one is directly filled in container. Humbaram has a strong flavour and odour, due to which it is not like by some people but it is also widely consumed."
+        },
+        {
+            "id": 14,
+            "language": "meitei",
+            "category": "food",
+            "worker_name": "Nikita Potshangbam",
+            "pictures": [
+                "assets/meitei_d1.png"
+            ],
+            "audio": "assets/audio/meitei/datapoint_1.wav",
+            "about_image": "Mathakta pirmliba mami asi manipuri da ngari hyna khangnei. Ngari hybasi nga bu kuina thammaga pathalaga semba potsakni. Ngari asi kangsoi thongbada amasung singju twbada ymna maru oina sijinnaba potsak amani. Ngari hybasi meitei amagidi ymna maru oiba hingbada chngdraba yadraba potsak amani.",
+            "hindi_translation": "The above image is of fermented fish which is known as ngari in manipuri language. They are made from fish by making the fish fermented in this way we can keep them for a long time . They are used in making vegetables stew known as kangsoi and singju which is a manipuri salad . They are an essential thing in a Meitei's life."
+        },
+        {
+            "id": 15,
+            "language": "meitei",
+            "category": "food",
+            "worker_name": "IROM THOUWALEMBI CHANU",
+            "pictures": [
+                "assets/meitei_d2.png"
+            ],
+            "audio": "assets/audio/meitei/datapoint_2.wav",
+            "about_image": "Masigi shaktam asi Ushingsha gi mahei haina khangnei. Masisu chanaba chinjak amani. Masi ayambana maru marang oina sijinnei . Aduga hidak oinasu sijinnaba yaowi.",
+            "hindi_translation": "The given image is known as Ceylon cinnamon. In Manipuri language it is called Ushingsha. It is used as spices for Meitei community. Maru Marang is the name of the word spices in manipuri."
+        },
+        {
+            "id": 16,
+            "language": "assamese",
+            "category": "food",
+            "worker_name": "Ghanashyam",
+            "pictures": [
+                "assets/assamese_d1.png"
+            ],
+            "audio": "assets/audio/assamese/datapoint_1.wav",
+            "about_image": "Asomar poribeshot onayase kheti koribo para ebidh dailjatiyo shosyo hol rohor mah. I pustir utsa aru asomiya randhanshailit iyar jothesto chahida ase jodiyo utpadon kom howar babe amdani koriblogia hoy. Asomar poribesh rohor mahor khetir babe upojugi buli krishi bisheshagyasokol nishchit hoise. Ghoror choupashor eneye pori thoka mati, okho potito mati, pukhurir par, barir khali mati adit rohor mahor kheti kori ashatitobhabe labhowan hobo pari. Anyanno dailjatiyo shosyor dore rohor mahor khetit bor bisesh lagio thakibo nalage, khorcho bor kom.",
+            "hindi_translation": "Asomar poribeshot onayase kheti koribo para ebidh dailjatiyo shosyo hol rohor mah. I pustir utsa aru asomiya randhanshailit iyar jothesto chahida ase jodiyo utpadon kom howar babe amdani koriblogia hoy. Asomar poribesh rohor mahor khetir babe upojugi buli krishi bisheshagyasokol nishchit hoise. Ghoror choupashor eneye pori thoka mati, okho potito mati, pukhurir par, barir khali mati adit rohor mahor kheti kori ashatitobhabe labhowan hobo pari. Anyanno dailjatiyo shosyor dore rohor mahor khetit bor bisesh lagio thakibo nalage, khorcho bor kom."
+        },
+        {
+            "id": 17,
+            "language": "assamese",
+            "category": "culture",
+            "worker_name": "Bhatima Baro",
+            "pictures": [
+                "assets/assamese_d2.png"
+            ],
+            "audio": "assets/audio/assamese/datapoint_2.wav",
+            "about_image": "Eitu hoise tat salor eta mako, eitu tat salor eta otikoi proyojoniyo ongkho, tat sal aru makor samporko bohut ghonistho, mako obihone tat bubo noware, makot murhar joriyote suta bhorowa hoi, makot suta bhowar subhidhar babe soru soru futa kisuman thake, sei futare jot nologakoi suta bhorowa hoi, proti ghor osomiyar ghore ghore tat sal thake.",
+            "hindi_translation": "Eitu hoise tat salor eta mako, eitu tat salor eta otikoi proyojoniyo ongkho, tat sal aru makor samporko bohut ghonistho, mako obihone tat bubo noware, makot murhar joriyote suta bhorowa hoi, makot suta bhowar subhidhar babe soru soru futa kisuman thake, sei futare jot nologakoi suta bhorowa hoi, proti ghor osomiyar ghore ghore tat sal thake."
+        },
+        {
+            "id": 18,
+            "language": "ho",
+            "category": "forest",
+            "worker_name": "Shilabati Banra",
+            "pictures": [
+                "assets/ho_d1.png"
+            ],
+            "audio": "assets/audio/ho/datapoint_1.wav",
+            "about_image": "नीना माडकम दारू ताना नेन रिया बा पोरोब रे बुगांया ऐको अंडों बा रो लेते जोमिया को अंडों नेन रिया जौ ऊतु ईसिन केते जोमिया को अंडों जांग ते सुनूम बाई ऐको अंडों सन ते सेंगेल जूल तिया को",
+            "hindi_translation": "यह महुआ का पेड़ है इसका फूल को कच्चा सूखा कर खाते हैं और फल सब्जी बनता है बीज से तेल निकाला जाता है और लकड़ी आग जलाने के लिए उपयोग में लाया जाता है"
+        },
+        {
+            "id": 19,
+            "language": "ho",
+            "category": "forest",
+            "worker_name": "kuni Kuntia",
+            "pictures": [
+                "assets/ho_d2.png"
+            ],
+            "audio": "assets/audio/ho/datapoint_2.wav",
+            "about_image": "नेया मियड रिटा दारू तना।नेन दारु रेया जो ते बुगि लेका रिड केड दा:रे तुपू केरे पोकोर बाइना ओडों नेया ते लिजे सुतुइ को सपाया को । ओडों नेन तेंगे कांसा रेया बेला गुटी को बुगि लेका सपाओवा।",
+            "hindi_translation": "ये एक रिटा पेड़ है। इसके फल को पिसकर, पानी में डलने से झाग बनता है जिससे कपड़ों को धोया जाता है। और इसके फल से ही कांसा के बर्तनों को धोया जाता है।"
+        }
+    ]
+}
