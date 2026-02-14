@@ -14,26 +14,26 @@ class ArchiveFilter {
     this.setupLanguageFilters();
     this.setupCategoryFilters();
     this.setupClearButton();
+    this.renderFilteredResults();
     this.updateResultsInfo();
   }
 
   setupLanguageFilters() {
-    document.querySelectorAll('.filter-chip[data-language]').forEach(chip => {
-      chip.addEventListener('click', () => {
-        const language = chip.dataset.language;
-        const isSelected = this.activeLanguages.includes(language) && this.activeLanguages.length === 1;
-        this.filterByLanguage(isSelected ? null : language);
+    const langSelect = document.getElementById('languageSelect');
+    if (langSelect) {
+      langSelect.addEventListener('change', (e) => {
+        this.filterByLanguage(e.target.value || null);
       });
-    });
+    }
   }
 
   setupCategoryFilters() {
-    document.querySelectorAll('.filter-chip[data-category]').forEach(chip => {
-      chip.addEventListener('click', () => {
-        const category = chip.dataset.category;
-        this.filterByCategory(category === this.activeCategory ? null : category);
+    const catSelect = document.getElementById('categorySelect');
+    if (catSelect) {
+      catSelect.addEventListener('change', (e) => {
+        this.filterByCategory(e.target.value || null);
       });
-    });
+    }
   }
 
   setupClearButton() {
@@ -45,21 +45,21 @@ class ArchiveFilter {
 
   filterByLanguage(language) {
     this.activeLanguages = language ? [language] : [];
-    this.updateFilterChips();
+    this.updateFilterUI();
     this.renderFilteredResults();
     this.updateResultsInfo();
   }
 
   filterByLanguages(languages) {
     this.activeLanguages = languages || [];
-    this.updateFilterChips();
+    this.updateFilterUI();
     this.renderFilteredResults();
     this.updateResultsInfo();
   }
 
   filterByCategory(category) {
     this.activeCategory = category;
-    this.updateFilterChips();
+    this.updateFilterUI();
     this.renderFilteredResults();
     this.updateResultsInfo();
   }
@@ -67,18 +67,22 @@ class ArchiveFilter {
   resetFilters() {
     this.activeLanguages = [];
     this.activeCategory = null;
-    this.updateFilterChips();
+    this.updateFilterUI();
     this.renderFilteredResults();
     this.updateResultsInfo();
   }
 
-  updateFilterChips() {
-    document.querySelectorAll('.filter-chip[data-language]').forEach(chip => {
-      chip.classList.toggle('active', this.activeLanguages.includes(chip.dataset.language));
-    });
-    document.querySelectorAll('.filter-chip[data-category]').forEach(chip => {
-      chip.classList.toggle('active', chip.dataset.category === this.activeCategory);
-    });
+  updateFilterUI() {
+    const langSelect = document.getElementById('languageSelect');
+    if (langSelect) {
+      langSelect.value = this.activeLanguages[0] || '';
+    }
+
+    const catSelect = document.getElementById('categorySelect');
+    if (catSelect) {
+      catSelect.value = this.activeCategory || '';
+    }
+
     const clearBtn = document.querySelector('.clear-filters');
     if (clearBtn) {
       clearBtn.style.display = (this.activeLanguages.length > 0 || this.activeCategory) ? 'inline-block' : 'none';
@@ -145,6 +149,21 @@ class ArchiveFilter {
       `;
     }).join('');
 
+    // Pictures gallery (optional for folksongs)
+    let picturesHtml = '';
+    if (item.pictures && item.pictures.length > 0) {
+      const thumbs = item.pictures.map((src, i) => `
+        <div class="thumb-item" data-index="${i}" data-entry="${item.id}">
+          <img src="${src}" alt="Image ${i + 1}" class="thumb-img" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'thumb-placeholder\\'>🖼️</span>';">
+        </div>
+      `).join('');
+      picturesHtml = `
+        <div class="image-gallery-v2">
+          <div class="thumbs-row-v2">${thumbs}</div>
+        </div>
+      `;
+    }
+
     const audioSrc = item.audio || '';
     const audioHtml = audioSrc ? `
       <div class="audio-player-v2" data-audio-src="${audioSrc}">
@@ -171,6 +190,7 @@ class ArchiveFilter {
           </span>
         </div>
         <div class="card-body-v2">
+          ${picturesHtml}
           ${audioHtml}
           <div class="qa-list-v2">${questionsHtml}</div>
         </div>
@@ -470,7 +490,11 @@ class ArchiveFilter {
   }
 
   loadFromURL() {
-    const params = new URLSearchParams(window.location.search);
+    // Support both real query params and hash-based params (e.g. #archive?category=food)
+    const hash = window.location.hash || '';
+    const qIndex = hash.indexOf('?');
+    const searchStr = qIndex !== -1 ? hash.substring(qIndex) : window.location.search;
+    const params = new URLSearchParams(searchStr);
     if (params.get('language')) this.activeLanguages = [params.get('language')];
     if (params.get('category')) this.activeCategory = params.get('category');
     this.updateFilterChips();

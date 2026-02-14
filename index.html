@@ -92,10 +92,6 @@
             <span class="stat-number" data-counter="contributors">0</span>
             <span class="stat-label">Contributors</span>
           </div>
-          <div class="hero-stat-item">
-            <span class="stat-number" data-counter="categories">0</span>
-            <span class="stat-label">Categories</span>
-          </div>
         </div>
       </div>
     </section>
@@ -222,56 +218,38 @@
       <div class="filter-controls reveal">
         <div class="filter-section">
           <span class="filter-label">Filter by Language</span>
-          <div class="filter-chips" id="languageFilters">
-            <button class="filter-chip" data-language="mundari">Mundari</button>
-            <button class="filter-chip" data-language="ho">Ho</button>
-            <button class="filter-chip" data-language="sadri">Sadri</button>
-            <button class="filter-chip" data-language="santhali">Santhali</button>
-            <button class="filter-chip" data-language="khortha">Khortha</button>
-            <button class="filter-chip" data-language="assamese">Assamese</button>
-            <button class="filter-chip" data-language="bodo">Bodo</button>
-            <button class="filter-chip" data-language="deuri">Deuri</button>
-            <button class="filter-chip" data-language="meitei">Meitei</button>
-            <button class="filter-chip" data-language="khasi">Khasi</button>
-            <button class="filter-chip" data-language="nagamese">Nagamese</button>
-            <button class="filter-chip" data-language="wangcho">Wangcho</button>
-            <button class="filter-chip" data-language="kaman-mishmi">Kaman Mishmi</button>
+          <div class="filter-select-wrapper">
+            <select id="languageSelect" class="filter-select">
+              <option value="">All Languages</option>
+              <option value="mundari">Mundari</option>
+              <option value="ho">Ho</option>
+              <option value="sadri">Sadri</option>
+              <option value="santhali">Santhali</option>
+              <option value="khortha">Khortha</option>
+              <option value="assamese">Assamese</option>
+              <option value="bodo">Bodo</option>
+              <option value="deuri">Deuri</option>
+              <option value="meitei">Meitei</option>
+              <option value="khasi">Khasi</option>
+              <option value="nagamese">Nagamese</option>
+              <option value="wangcho">Wangcho</option>
+              <option value="kaman-mishmi">Kaman Mishmi</option>
+            </select>
           </div>
         </div>
 
         <div class="filter-section">
           <span class="filter-label">Filter by Category</span>
-          <div class="filter-chips" id="categoryFilters">
-            <button class="filter-chip" data-category="folksongs"
-              style="background: #1661764D; color: black; border: 1px solid #16617680;">
-              <span class="chip-icon"><img src="assets/music-note.png" width="18" height="18" alt="Folksongs"></span>
-              Folksongs
-            </button>
-            <button class="filter-chip" data-category="agriculture"
-              style="background: #00AFDF4D; color: black; border: 1px solid #00AFDF80;">
-              <span class="chip-icon"><img src="assets/sprout.png" width="18" height="18" alt="Agriculture"></span>
-              Agriculture
-            </button>
-            <button class="filter-chip" data-category="forest"
-              style="background: #14B1664D; color: black; border: 1px solid #14B16680;">
-              <span class="chip-icon"><img src="assets/trees.png" width="18" height="18" alt="Forest"></span>
-              Forest
-            </button>
-            <button class="filter-chip" data-category="food"
-              style="background: #D8FA704D; color: black; border: 1px solid #D8FA7080;">
-              <span class="chip-icon"><img src="assets/noun-food-7999827.png" width="18" height="18" alt="Food"></span>
-              Food/Nutrition
-            </button>
-            <button class="filter-chip" data-category="culture"
-              style="background: #8FE7FF4D; color: black; border: 1px solid #8FE7FF80;">
-              <span class="chip-icon"><img src="assets/parthenon.png" width="18" height="18" alt="Culture"></span>
-              Culture/Traditions
-            </button>
-            <button class="filter-chip" data-category="other"
-              style="background: #94A3B84D; color: black; border: 1px solid #94A3B880;">
-              <span class="chip-icon"><img src="assets/application.png" width="18" height="18" alt="Other"></span>
-              Other
-            </button>
+          <div class="filter-select-wrapper">
+            <select id="categorySelect" class="filter-select">
+              <option value="">All Categories</option>
+              <option value="folksongs">Folksongs</option>
+              <option value="agriculture">Agriculture</option>
+              <option value="forest">Forest</option>
+              <option value="food">Food/Nutrition</option>
+              <option value="culture">Culture/Traditions</option>
+              <option value="other">Other</option>
+            </select>
           </div>
         </div>
 
@@ -312,7 +290,7 @@
           </div>
           <div class="stat-card">
             <div class="stat-icon"><img src="assets/map.png" width="32" height="32" alt="States"></div>
-            <div class="stat-value" data-counter="categories">0</div>
+            <div class="stat-value" data-counter="states">0</div>
             <div class="stat-name">States Covered</div>
           </div>
           <div class="stat-card">
@@ -329,44 +307,44 @@
               <div class="chart-bar">
                 <span class="bar-label">Folksongs</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: #166176BF;" data-width="17"></div>
+                  <div class="bar-fill" style="background-color: var(--color-deep-sea);"></div>
                 </div>
-                <span class="bar-value">5</span>
+                <span class="bar-value">0</span>
               </div>
               <div class="chart-bar">
                 <span class="bar-label">Culture</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: #8FE7FFBF;" data-width="17"></div>
+                  <div class="bar-fill" style="background-color: var(--color-sea);"></div>
                 </div>
-                <span class="bar-value">5</span>
+                <span class="bar-value">0</span>
               </div>
               <div class="chart-bar">
                 <span class="bar-label">Agriculture</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: #00AFDFBF;" data-width="13"></div>
+                  <div class="bar-fill" style="background-color: var(--color-tech-blue);"></div>
                 </div>
-                <span class="bar-value">4</span>
+                <span class="bar-value">0</span>
               </div>
               <div class="chart-bar">
                 <span class="bar-label">Forest</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: #14B166BF;" data-width="13"></div>
+                  <div class="bar-fill" style="background-color: var(--color-impact-green);"></div>
                 </div>
-                <span class="bar-value">4</span>
+                <span class="bar-value">0</span>
               </div>
               <div class="chart-bar">
                 <span class="bar-label">Food</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: #D8FA70BF;" data-width="17"></div>
+                  <div class="bar-fill" style="background-color: var(--color-lime);"></div>
                 </div>
-                <span class="bar-value">5</span>
+                <span class="bar-value">0</span>
               </div>
               <div class="chart-bar">
                 <span class="bar-label">Other</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: #94A3B8BF;" data-width="23"></div>
+                  <div class="bar-fill" style="background-color: var(--gray-400);"></div>
                 </div>
-                <span class="bar-value">7</span>
+                <span class="bar-value">0</span>
               </div>
             </div>
           </div>
@@ -376,19 +354,19 @@
             <div class="bar-chart" id="typeChart">
               <div class="chart-bar">
                 <span class="bar-label"><img src="assets/image (4).png" width="18" height="18" alt="Images"
-                    style="vertical-align: middle; margin-right: 4px;">Images</span>
+                    style="vertical-align: middle; margin-right: 8px;">Images</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: #00AFDFBF;" data-width="60"></div>
+                  <div class="bar-fill" style="background-color: var(--color-tech-blue);"></div>
                 </div>
-                <span class="bar-value">18</span>
+                <span class="bar-value">0</span>
               </div>
               <div class="chart-bar">
                 <span class="bar-label"><img src="assets/headphones.png" width="18" height="18" alt="Audio"
-                    style="vertical-align: middle; margin-right: 4px;">Audio</span>
+                    style="vertical-align: middle; margin-right: 8px;">Audio</span>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 0%; background: #166176BF;" data-width="33"></div>
+                  <div class="bar-fill" style="background-color: var(--color-deep-sea);"></div>
                 </div>
-                <span class="bar-value">10</span>
+                <span class="bar-value">0</span>
               </div>
             </div>
           </div>

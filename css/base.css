@@ -740,7 +740,7 @@ p {
         transform var(--duration-slow) var(--ease-out);
 }
 
-.reveal.active {
+.reveal.revealed {
     opacity: 1;
     transform: translateY(0);
 }

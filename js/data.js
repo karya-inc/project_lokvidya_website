@@ -57,10 +57,10 @@ function getStats() {
   });
 
   return {
-    totalEntries: archiveData.length,
-    totalLanguages: LANGUAGES.length,
-    totalCategories: CATEGORIES.length,
-    contributors: new Set(archiveData.map(item => item.worker_name)).size,
+    totalEntries: 8067,
+    totalLanguages: 13,
+    states: 7,
+    contributors: 360,
     entriesByCategory,
     entriesByType
   };
