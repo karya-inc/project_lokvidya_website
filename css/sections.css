@@ -362,6 +362,10 @@
         gap: var(--space-6);
     }
 
+    .hero-stats-new .hero-stat-item:last-child {
+        grid-column: span 2;
+    }
+
     .stat-number {
         font-size: 2.5rem;
     }

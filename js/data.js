@@ -3,6 +3,9 @@
  * Loads archive data from archive_data.json
  */
 
+// Global configuration
+const SHOW_CONTRIBUTORS = false;
+
 // Global variables populated by loadArchiveData()
 let LANGUAGES = [];
 let CATEGORIES = [];

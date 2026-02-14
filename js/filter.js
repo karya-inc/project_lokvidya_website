@@ -194,6 +194,7 @@ class ArchiveFilter {
           ${audioHtml}
           <div class="qa-list-v2">${questionsHtml}</div>
         </div>
+        ${SHOW_CONTRIBUTORS ? `
         <div class="card-footer-v2">
           <div class="contributor-v2">
             <div class="avatar-v2">${item.worker_name.charAt(0)}</div>
@@ -203,6 +204,7 @@ class ArchiveFilter {
             </div>
           </div>
         </div>
+        ` : ''}
       </article>
     `;
   }
@@ -283,6 +285,7 @@ class ArchiveFilter {
           ${audioHtml}
           ${contentHtml}
         </div>
+        ${SHOW_CONTRIBUTORS ? `
         <div class="card-footer-v2">
           <div class="contributor-v2">
             <div class="avatar-v2">${item.worker_name.charAt(0)}</div>
@@ -292,6 +295,7 @@ class ArchiveFilter {
             </div>
           </div>
         </div>
+        ` : ''}
       </article>
     `;
   }
